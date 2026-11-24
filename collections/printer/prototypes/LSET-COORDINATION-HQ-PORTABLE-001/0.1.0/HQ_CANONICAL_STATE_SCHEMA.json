@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "HQ_CANONICAL_STATE_SCHEMA_v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "snapshot_version",
+    "headquarters",
+    "authority_ledger",
+    "project_registry",
+    "coordination_queue",
+    "decision_ledger",
+    "blocker_registry",
+    "artifact_manifest",
+    "thread_ledger",
+    "unknowns"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "snapshot_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "headquarters": {
+      "type": "object",
+      "required": [
+        "name",
+        "role",
+        "operator_authority"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "operator_authority": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "authority_ledger": {
+      "type": "array"
+    },
+    "project_registry": {
+      "type": "array"
+    },
+    "coordination_queue": {
+      "type": "array"
+    },
+    "decision_ledger": {
+      "type": "array"
+    },
+    "blocker_registry": {
+      "type": "array"
+    },
+    "artifact_manifest": {
+      "type": "array"
+    },
+    "thread_ledger": {
+      "type": "array"
+    },
+    "unknowns": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

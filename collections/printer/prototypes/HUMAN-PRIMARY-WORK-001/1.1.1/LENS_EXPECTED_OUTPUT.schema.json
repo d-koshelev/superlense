@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "primary_work",
+    "forward_field",
+    "immediate_reach",
+    "contextual_surface",
+    "preflight",
+    "maintenance"
+  ],
+  "properties": {
+    "primary_work": {},
+    "forward_field": {},
+    "immediate_reach": {},
+    "contextual_surface": {},
+    "preflight": {},
+    "maintenance": {}
+  },
+  "additionalProperties": true
+}

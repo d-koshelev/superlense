@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/component-gate.schema.json",
+  "type": "object",
+  "required": ["gate_id", "component_id", "risk", "required_maturity", "observed_modules", "decision", "implementation_permitted", "reason", "evaluated_at"],
+  "properties": {
+    "decision": {"enum": ["pass", "hold", "reject", "conditional_test_scaffold"]},
+    "implementation_permitted": {"type": "boolean"},
+    "production_release_permitted": {"type": "boolean"},
+    "observed_modules": {"type": "array"}
+  }
+}
+

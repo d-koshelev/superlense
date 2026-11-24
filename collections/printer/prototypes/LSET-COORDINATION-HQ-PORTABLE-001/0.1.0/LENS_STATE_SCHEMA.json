@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "lens_set_id",
+    "version",
+    "mount_status",
+    "order_id",
+    "canonical_replacement_permitted"
+  ],
+  "properties": {
+    "lens_set_id": {
+      "type": "string",
+      "const": "LSET-COORDINATION-HQ-PORTABLE-001"
+    },
+    "version": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "mount_status": {
+      "type": "string",
+      "enum": [
+        "unmounted",
+        "provisional",
+        "verified",
+        "blocked"
+      ]
+    },
+    "order_id": {
+      "type": "string",
+      "const": "LORD-HQ-PORTABILITY-001"
+    },
+    "canonical_replacement_permitted": {
+      "type": "boolean",
+      "const": false
+    },
+    "runtime_build_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "canonical_state_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "blocker_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

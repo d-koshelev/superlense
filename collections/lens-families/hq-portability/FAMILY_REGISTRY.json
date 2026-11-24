@@ -1,0 +1,119 @@
+{
+  "family_id": "LENS-FAMILY-HQ-PORTABILITY-001",
+  "order_id": "LORD-HQ-PORTABILITY-001",
+  "lens_set_id": "LSET-COORDINATION-HQ-PORTABLE-001",
+  "version": "0.1.0",
+  "reused_modules": [
+    {
+      "lens_id": "LENS-INTAKE-001",
+      "version": "0.1.0",
+      "role": "operator intake normalization"
+    },
+    {
+      "lens_id": "LENS-DECISION-001",
+      "version": "0.1.0",
+      "role": "decision/proposal separation"
+    },
+    {
+      "lens_id": "LENS-BOUNDARY-001",
+      "version": "0.1.1",
+      "role": "visible-state and read-only boundary"
+    },
+    {
+      "lens_id": "LENS-STATE-001",
+      "version": "0.1.0",
+      "role": "reattachment and state projection"
+    },
+    {
+      "lens_id": "LENS-QUEUE-001",
+      "version": "0.1.0",
+      "role": "planning-before-queue and scope admission"
+    },
+    {
+      "lens_id": "LENS-REPORT-001",
+      "version": "0.1.0",
+      "role": "operator projection"
+    }
+  ],
+  "new_modules": [
+    {
+      "lens_id": "LENS-HQVISIBLE-001",
+      "version": "0.1.0",
+      "package_path": "printer/prototypes/LENS-HQVISIBLE-001/0.1.0",
+      "package_sha256": "2c0e7dbb9b68bda62fdf94ba3eb2f0726abadb5d3979ad017b2c936b43a03a22",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQAUTH-001",
+      "version": "0.1.0",
+      "package_path": "printer/prototypes/LENS-HQAUTH-001/0.1.0",
+      "package_sha256": "5e6ef2d4499019391e7a39761cb5f4096bea436c1e21c490c5e7205f8fb90330",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQPROJECT-001",
+      "version": "0.1.0",
+      "package_path": "printer/prototypes/LENS-HQPROJECT-001/0.1.0",
+      "package_sha256": "d8580e40624e0455502f8401f8af6da0e2f1cb97fef5de06e02d95dedf9f484a",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQARTIFACT-001",
+      "version": "0.1.0",
+      "package_path": "printer/prototypes/LENS-HQARTIFACT-001/0.1.0",
+      "package_sha256": "fef2cfa68772d5bc94ed3f872c2f7f14c74b08f03def7337fe4447a68361a455",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQPRIVACY-001",
+      "version": "0.1.0",
+      "package_path": "printer/prototypes/LENS-HQPRIVACY-001/0.1.0",
+      "package_sha256": "d385db807505ca3e306a91f438016e6d68326ab87522513683442eac0c4dd7c0",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQINTEGRITY-001",
+      "version": "0.1.0",
+      "package_path": "printer/prototypes/LENS-HQINTEGRITY-001/0.1.0",
+      "package_sha256": "664f2cd0715572e55362c534ac1ac314f9e0fd85d604f35961eae60585b59eca",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQBOOTSTRAP-001",
+      "version": "0.1.0",
+      "package_path": "printer/prototypes/LENS-HQBOOTSTRAP-001/0.1.0",
+      "package_sha256": "5e6c67efaea14ff44ab9c61c9c0aa153810f677e155c070950cf4ec7c56e9445",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQRESTORE-001",
+      "version": "0.1.0",
+      "package_path": "printer/prototypes/LENS-HQRESTORE-001/0.1.0",
+      "package_sha256": "15187e82b15b0af170ef735742f4f0a7af60138860a17d3ee0c42059ffad2bb3",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQDELTA-001",
+      "version": "0.1.0",
+      "package_path": "printer/prototypes/LENS-HQDELTA-001/0.1.0",
+      "package_sha256": "143b9511bd512dadf7a16e79e184a2dd9ab616d7e13b77ed7a4f3a4b30c8f0a7",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    }
+  ],
+  "set_package": {
+    "path": "printer/prototypes/LSET-COORDINATION-HQ-PORTABLE-001/0.1.0",
+    "package_sha256": "7edcb989ce57bd0b32c3059defec2a15cce4c75ba27adc5bd1469aa0aae2ce6f"
+  },
+  "external_validation": "waiting_external_agent",
+  "canonical_replacement_permitted": false,
+  "updated_at": "2026-07-11T17:06:23.381Z"
+}

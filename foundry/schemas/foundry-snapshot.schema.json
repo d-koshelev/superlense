@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/foundry-snapshot.schema.json",
+  "type": "object",
+  "required": ["snapshot_id", "generated_at", "classification", "orders", "effect_targets", "catalog", "printer", "test_runs", "comparisons", "effect_vectors", "ablation", "aberrations", "regressions", "releases", "component_gates", "queue", "operator_attention", "source_digests"],
+  "properties": {
+    "classification": {"const": "read_only_noncanonical_projection"},
+    "test_runs": {"type": "array"},
+    "queue": {"type": "object"},
+    "source_digests": {"type": "object"}
+  },
+  "additionalProperties": true
+}
+

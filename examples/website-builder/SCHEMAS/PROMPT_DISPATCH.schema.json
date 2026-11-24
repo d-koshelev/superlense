@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:superlense:website-builder:prompt-dispatch:1.0.0",
+  "title": "PROMPT_DISPATCH",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "prompt_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "content_hash": {
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "DRAFT",
+        "APPROVED",
+        "SENT",
+        "ACKNOWLEDGED",
+        "IN_PROGRESS",
+        "RECEIPT_RECEIVED",
+        "SUPERSEDED",
+        "BLOCKED",
+        "CANCELLED"
+      ]
+    },
+    "sent_evidence_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "receipt_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "prompt_id",
+    "project_id",
+    "task_id",
+    "content_hash",
+    "state",
+    "sent_evidence_id",
+    "receipt_ids",
+    "supersedes"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "enum": [
+              "SENT",
+              "ACKNOWLEDGED",
+              "IN_PROGRESS",
+              "RECEIPT_RECEIVED"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "sent_evidence_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "sent_evidence_id"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "const": "RECEIPT_RECEIVED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "receipt_ids": {
+            "type": "array",
+            "minItems": 1
+          }
+        },
+        "required": [
+          "receipt_ids"
+        ]
+      }
+    }
+  ]
+}

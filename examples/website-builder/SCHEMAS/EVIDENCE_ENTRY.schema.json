@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:superlense:website-builder:evidence-entry:1.0.0",
+  "title": "EVIDENCE_ENTRY",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "evidence_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "OPERATOR_REPORTED",
+        "CODEX_REPORTED",
+        "DIRECT_LOCAL_EVIDENCE",
+        "ARTIFACT_ATTACHED",
+        "COMMAND_OUTPUT_ATTACHED",
+        "SCREENSHOT",
+        "INDEPENDENTLY_REVIEWED",
+        "OPERATOR_VISUALLY_ACCEPTED"
+      ]
+    },
+    "claim": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "artifact_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authority_record_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "captured_at": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "evidence_id",
+    "project_id",
+    "kind",
+    "claim",
+    "source",
+    "artifact_hash",
+    "authority_record_id",
+    "limitations",
+    "captured_at"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "OPERATOR_VISUALLY_ACCEPTED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "source": {
+            "const": "OPERATOR"
+          },
+          "artifact_hash": {
+            "type": "string",
+            "minLength": 1
+          },
+          "authority_record_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "source",
+          "artifact_hash",
+          "authority_record_id"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "graph_id": "LENS-COMPATIBILITY-GRAPH-v1",
+  "updated_at": "2026-07-10T23:55:14.134Z",
+  "nodes": [
+    "LENS-INTAKE-001",
+    "LENS-DECISION-001",
+    "LENS-BOUNDARY-001",
+    "LENS-STATE-001",
+    "LENS-QUEUE-001",
+    "LENS-REPORT-001"
+  ],
+  "requires": [],
+  "orders_before": [
+    {
+      "before": "LENS-INTAKE-001",
+      "after": "LENS-BOUNDARY-001",
+      "status": "hypothesis"
+    },
+    {
+      "before": "LENS-STATE-001",
+      "after": "LENS-QUEUE-001",
+      "status": "hypothesis"
+    },
+    {
+      "before": "LENS-DECISION-001",
+      "after": "LENS-REPORT-001",
+      "status": "hypothesis"
+    }
+  ],
+  "incompatible_with": [],
+  "unknown_interactions": [
+    "All pairwise and provider interactions require external tests."
+  ],
+  "note": "Edges are populated from qualified prototype contracts; absent edge means unknown, not compatible."
+}

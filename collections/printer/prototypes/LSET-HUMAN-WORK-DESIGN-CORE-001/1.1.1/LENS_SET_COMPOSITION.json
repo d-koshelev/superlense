@@ -1,0 +1,132 @@
+{
+  "$schema": "../../../../schemas/lens-set-composition.schema.json",
+  "set_id": "LSET-HUMAN-WORK-DESIGN-CORE-001",
+  "lens_set_id": "LSET-HUMAN-WORK-DESIGN-CORE-001",
+  "package_id": "SUPERLENSE-COPILOT-HUMAN-WORK-DESIGN-CORE-001",
+  "version": "1.1.1",
+  "layers": [
+    {
+      "layer": 0,
+      "name": "ABSOLUTE_GUARDRAILS",
+      "source": "AGENTS.md and active doctrine",
+      "overrideable": false
+    },
+    {
+      "layer": 1,
+      "name": "HUMAN_WORK_DESIGN_CORE",
+      "source": "printer/prototypes/LSET-HUMAN-WORK-DESIGN-CORE-001/1.1.1/LENS_RUNTIME_CONTRACTS.json",
+      "overrideable": false
+    },
+    {
+      "layer": 2,
+      "name": "PROVIDER_ADAPTER",
+      "source": "selected provider profile",
+      "overrideable": false
+    },
+    {
+      "layer": 3,
+      "name": "DOMAIN_SPECIALIZATION",
+      "source": "task-selected Catalog Lens set",
+      "overrideable": false
+    },
+    {
+      "layer": 4,
+      "name": "PROJECT_CONTEXT",
+      "source": "canonical current task and authorized materials",
+      "overrideable": false
+    }
+  ],
+  "ordered_modules": [
+    "HUMAN-AGENT-MUTUAL-UNDERSTANDING-001",
+    "DESIGN-ERROR-FIRST-CRITIQUE-001",
+    "HUMAN-PRIMARY-WORK-001",
+    "HUMAN-AUDIENCE-AND-CONTEXT-001",
+    "DESIGN-STOP-AND-REVIEW-GATE-001",
+    "DESIGN-OVERENGINEERING-CONTROL-001",
+    "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+    "DESIGN-INFORMATION-PRIORITY-001",
+    "HUMAN-ATTENTION-BUDGET-001",
+    "HUMAN-INTERRUPTION-COST-001",
+    "HUMAN-ENERGY-ALLOCATION-001",
+    "HUMAN-RESOURCE-ROUTER-001",
+    "DESIGN-OPERATOR-AGENCY-001"
+  ],
+  "ordered_module_versions": [
+    {
+      "lens_id": "HUMAN-AGENT-MUTUAL-UNDERSTANDING-001",
+      "version": "1.1.1"
+    },
+    {
+      "lens_id": "DESIGN-ERROR-FIRST-CRITIQUE-001",
+      "version": "1.1.1"
+    },
+    {
+      "lens_id": "HUMAN-PRIMARY-WORK-001",
+      "version": "1.1.1"
+    },
+    {
+      "lens_id": "HUMAN-AUDIENCE-AND-CONTEXT-001",
+      "version": "1.1.1"
+    },
+    {
+      "lens_id": "DESIGN-STOP-AND-REVIEW-GATE-001",
+      "version": "1.0.0"
+    },
+    {
+      "lens_id": "DESIGN-OVERENGINEERING-CONTROL-001",
+      "version": "1.0.0"
+    },
+    {
+      "lens_id": "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+      "version": "1.0.0"
+    },
+    {
+      "lens_id": "DESIGN-INFORMATION-PRIORITY-001",
+      "version": "1.1.1"
+    },
+    {
+      "lens_id": "HUMAN-ATTENTION-BUDGET-001",
+      "version": "1.1.1"
+    },
+    {
+      "lens_id": "HUMAN-INTERRUPTION-COST-001",
+      "version": "1.1.1"
+    },
+    {
+      "lens_id": "HUMAN-ENERGY-ALLOCATION-001",
+      "version": "1.1.1"
+    },
+    {
+      "lens_id": "HUMAN-RESOURCE-ROUTER-001",
+      "version": "1.1.1"
+    },
+    {
+      "lens_id": "DESIGN-OPERATOR-AGENCY-001",
+      "version": "1.1.1"
+    }
+  ],
+  "context_budget": {
+    "lenses": 13,
+    "rules": 87,
+    "policy": "load_compact_contracts_only",
+    "knowledge_notes_runtime_loaded": false
+  },
+  "authority_check": {
+    "result": "pass",
+    "operator_final": true,
+    "layer_0_overrides": true,
+    "domain_may_refine_not_override": true
+  },
+  "compatibility_check": {
+    "result": "static_pass",
+    "dependency_cycles": 0,
+    "duplicate_primary_responsibilities": 0,
+    "provider_neutral": true,
+    "project_state_created": false,
+    "default_subpacks": [
+      "LSET-DESIGN-DIRECTION-CONTROL-001"
+    ]
+  },
+  "removable": true,
+  "canonical_replacement_permitted": false
+}

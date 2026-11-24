@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/web-design-completion-evidence.schema.json",
+  "title": "Web Interface Completion Evidence",
+  "type": "object",
+  "required": [
+    "status",
+    "preflight_ref",
+    "active_lenses",
+    "primary_task",
+    "browser_inspection",
+    "screenshots",
+    "states_tested",
+    "responsive_modes_tested",
+    "visual_qa",
+    "completion_evidence",
+    "rule_defect_workflow"
+  ],
+  "properties": {
+    "status": {
+      "enum": [
+        "COMPLETED",
+        "BLOCKED"
+      ]
+    },
+    "preflight_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "active_lenses": {
+      "type": "array",
+      "minItems": 12,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "primary_task": {
+      "type": "string",
+      "minLength": 1
+    },
+    "browser_inspection": {
+      "type": "object",
+      "required": [
+        "performed",
+        "browser"
+      ],
+      "properties": {
+        "performed": {
+          "const": true
+        },
+        "browser": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "screenshots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "states_tested": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "responsive_modes_tested": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "visual_qa": {
+      "type": "object",
+      "required": [
+        "performed",
+        "error_first_order",
+        "hard_failures_remaining",
+        "repeat_browser_validation"
+      ],
+      "properties": {
+        "performed": {
+          "const": true
+        },
+        "error_first_order": {
+          "const": true
+        },
+        "hard_failures_remaining": {
+          "maxItems": 0,
+          "type": "array"
+        },
+        "repeat_browser_validation": {
+          "const": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "completion_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "rule_defect_workflow": {
+      "type": "object",
+      "required": [
+        "checked",
+        "defects_found",
+        "rule_corrections_before_local_patches",
+        "negative_tests_added",
+        "positive_tests_added",
+        "future_interface_work"
+      ],
+      "properties": {
+        "checked": {
+          "const": true
+        },
+        "defects_found": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rule_corrections_before_local_patches": {
+          "type": "boolean"
+        },
+        "negative_tests_added": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "positive_tests_added": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "future_interface_work": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

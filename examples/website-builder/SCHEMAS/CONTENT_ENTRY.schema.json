@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:superlense:website-builder:content-entry:1.0.0",
+  "title": "CONTENT_ENTRY",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "content_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "CONTENT_CONFIRMED",
+        "CONTENT_DRAFT",
+        "CONTENT_PLACEHOLDER",
+        "CONTENT_MISSING"
+      ]
+    },
+    "content": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source": {
+      "type": "string"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "acceptance_allowed": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "content_id",
+    "project_id",
+    "location",
+    "purpose",
+    "status",
+    "content",
+    "source",
+    "evidence_ids",
+    "acceptance_allowed"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "acceptance_allowed": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "status": {
+            "const": "CONTENT_CONFIRMED"
+          },
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "not": {
+              "pattern": "(?i)lorem ipsum"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "content"
+        ]
+      }
+    }
+  ]
+}

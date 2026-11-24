@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/release-record.schema.json",
+  "type": "object",
+  "required": ["decision_id", "lens_id", "version", "decision", "required_evidence", "observed_evidence", "unknowns", "reviewed_at"],
+  "properties": {
+    "decision": {"enum": ["released", "held", "rejected", "deprecated", "superseded"]},
+    "required_evidence": {"type": "object"},
+    "observed_evidence": {"type": "object"},
+    "unknowns": {"type": "array"}
+  }
+}

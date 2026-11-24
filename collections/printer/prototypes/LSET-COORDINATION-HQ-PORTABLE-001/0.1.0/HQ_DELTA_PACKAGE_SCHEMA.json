@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "delta_id",
+    "base_canonical_state_hash",
+    "target_snapshot_version",
+    "operations",
+    "conflicts",
+    "provenance"
+  ],
+  "properties": {
+    "delta_id": {
+      "type": "string"
+    },
+    "base_canonical_state_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "target_snapshot_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "operation",
+          "record_id",
+          "record"
+        ],
+        "properties": {
+          "operation": {
+            "type": "string",
+            "enum": [
+              "add",
+              "replace",
+              "supersede",
+              "remove_reference"
+            ]
+          },
+          "record_id": {
+            "type": "string"
+          },
+          "record": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "conflicts": {
+      "type": "array"
+    },
+    "provenance": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

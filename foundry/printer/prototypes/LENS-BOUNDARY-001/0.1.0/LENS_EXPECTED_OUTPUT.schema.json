@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "result",
+    "evidence",
+    "assumptions",
+    "unknowns",
+    "verification",
+    "operator_overview"
+  ],
+  "properties": {
+    "result": {},
+    "evidence": {
+      "type": "array"
+    },
+    "assumptions": {
+      "type": "array"
+    },
+    "unknowns": {
+      "type": "array"
+    },
+    "verification": {
+      "type": "object"
+    },
+    "operator_overview": {
+      "type": "string"
+    }
+  }
+}

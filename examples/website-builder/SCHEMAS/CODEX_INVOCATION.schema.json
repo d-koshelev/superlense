@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:superlense:website-builder:codex-invocation:1.0.0",
+  "title": "CODEX_INVOCATION",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "invocation_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "gate": {
+      "enum": [
+        "CHATGPT_ONLY",
+        "CODEX_CAPABILITY_PROBE",
+        "CODEX_READ_ONLY_AUDIT",
+        "CODEX_IMPLEMENTATION_BATCH",
+        "CODEX_QA_BATCH",
+        "CODEX_RECOVERY"
+      ]
+    },
+    "state": {
+      "enum": [
+        "DRAFT",
+        "APPROVED",
+        "SENT",
+        "RUNNING",
+        "RECEIPT_RECEIVED",
+        "REPORTED_COMPLETE",
+        "EVIDENCE_ATTACHED",
+        "VERIFIED",
+        "ACCEPTED",
+        "BLOCKED",
+        "CANCELLED"
+      ]
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "project_baseline": {
+      "type": "string"
+    },
+    "estimated_work_class": {
+      "type": "string"
+    },
+    "context_capsule_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "context_capsule_tokens": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3500
+    },
+    "could_chatgpt_do": {
+      "type": "boolean"
+    },
+    "necessity_rationale": {
+      "type": "string"
+    },
+    "repeated_work_avoided": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "sent_evidence_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "receipt_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "verification_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "invocation_id",
+    "project_id",
+    "gate",
+    "state",
+    "purpose",
+    "project_baseline",
+    "estimated_work_class",
+    "context_capsule_id",
+    "context_capsule_tokens",
+    "could_chatgpt_do",
+    "necessity_rationale",
+    "repeated_work_avoided",
+    "sent_evidence_id",
+    "receipt_ids",
+    "verification_evidence_ids"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "gate": {
+            "enum": [
+              "CODEX_CAPABILITY_PROBE",
+              "CODEX_READ_ONLY_AUDIT",
+              "CODEX_IMPLEMENTATION_BATCH",
+              "CODEX_QA_BATCH",
+              "CODEX_RECOVERY"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "context_capsule_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "context_capsule_id"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "enum": [
+              "SENT",
+              "RUNNING",
+              "RECEIPT_RECEIVED",
+              "REPORTED_COMPLETE",
+              "EVIDENCE_ATTACHED",
+              "VERIFIED",
+              "ACCEPTED"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "sent_evidence_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "sent_evidence_id"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "enum": [
+              "RECEIPT_RECEIVED",
+              "REPORTED_COMPLETE",
+              "EVIDENCE_ATTACHED",
+              "VERIFIED",
+              "ACCEPTED"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "receipt_ids": {
+            "type": "array",
+            "minItems": 1
+          }
+        },
+        "required": [
+          "receipt_ids"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "enum": [
+              "VERIFIED",
+              "ACCEPTED"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "verification_evidence_ids": {
+            "type": "array",
+            "minItems": 1
+          }
+        },
+        "required": [
+          "verification_evidence_ids"
+        ]
+      }
+    }
+  ]
+}

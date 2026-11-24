@@ -1,0 +1,32 @@
+{
+  "set_id": "DESIGN-STOP-AND-REVIEW-GATE-001-SOLO",
+  "version": "1.0.0",
+  "ordered_modules": [
+    "DESIGN-STOP-AND-REVIEW-GATE-001"
+  ],
+  "layer": 1,
+  "priority": 45,
+  "context_budget": {
+    "rule_count": 8,
+    "policy": "compact_contract_only"
+  },
+  "authority_check": {
+    "result": "pass",
+    "operator_final": true,
+    "layer_0_overrides": true
+  },
+  "compatibility_check": {
+    "result": "static_pass",
+    "compatible_lenses": [
+      "LAYER_0_GUARDRAILS",
+      "PROVIDER_ADAPTER",
+      "DOMAIN_SPECIALIZATION",
+      "PROJECT_CONTEXT",
+      "LENS-INTAKE-001",
+      "LENS-DECISION-001",
+      "LENS-BOUNDARY-001",
+      "LENS-QUEUE-001",
+      "LENS-REPORT-001"
+    ]
+  }
+}

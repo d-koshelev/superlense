@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "object_of_control",
+    "action_state",
+    "consequences",
+    "automation_boundary",
+    "override_controls",
+    "decision_owner"
+  ],
+  "properties": {
+    "object_of_control": {},
+    "action_state": {},
+    "consequences": {},
+    "automation_boundary": {},
+    "override_controls": {},
+    "decision_owner": {}
+  },
+  "additionalProperties": true
+}

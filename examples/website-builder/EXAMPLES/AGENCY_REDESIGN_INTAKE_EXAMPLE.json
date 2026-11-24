@@ -1,0 +1,12 @@
+{
+  "evidence_level": "EXAMPLE_ONLY_NOT_OPERATOR_PROJECT_FACT",
+  "project_type": "AGENCY_WEBSITE",
+  "first_questions": [
+    "Which website is active?",
+    "Is it new or existing?",
+    "What business result should it create?",
+    "What local project or materials are available?",
+    "What is the immediate next deliverable?"
+  ],
+  "next_gate": "PROJECT_BASELINE_DRAFT"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "lens_set_id": "LSET-DESIGN-DIRECTION-CONTROL-001",
+  "package_id": "SUPERLENSE-DESIGN-DIRECTION-CONTROL-001",
+  "name": "Design Direction Control",
+  "version": "1.0.0",
+  "package_type": "LensSetPrototype",
+  "role": "DEFAULT_FOUNDATIONAL_SUBPACK",
+  "layer": 1,
+  "maturity": "prototype",
+  "evidence_level": "L1",
+  "internal_default_loading": true,
+  "external_validation": "unavailable",
+  "modules_total": 3,
+  "modules_created": 2,
+  "modules_reused": 1,
+  "parallel_architecture_created": false
+}

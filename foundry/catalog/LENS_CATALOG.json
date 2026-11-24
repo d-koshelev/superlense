@@ -1,0 +1,368 @@
+{
+  "catalog_id": "LENSE-FOUNDRY-CATALOG-v1",
+  "updated_at": "2026-07-10T23:55:14.267Z",
+  "modules": [
+    {
+      "lens_id": "LENS-INTAKE-001",
+      "name": "Expert Intake and Normalization",
+      "version": "0.1.0",
+      "classification": {
+        "primary_effect_class": "Collimator",
+        "secondary_effect_classes": [
+          "Aperture",
+          "Prism"
+        ],
+        "scope": "task_family",
+        "authority": "advisory_with_explicit_boundaries",
+        "persistence": "session"
+      },
+      "qualification": {
+        "adjacent_concept_check": {
+          "result": "Lens_Module_candidate",
+          "not_merely": [
+            "doctrine",
+            "prompt",
+            "persona",
+            "skill",
+            "tool",
+            "queue",
+            "memory_store",
+            "report_form",
+            "department",
+            "agent"
+          ]
+        },
+        "answers": {
+          "defined_problem_class": true,
+          "behavioral_transformation": true,
+          "removable": true,
+          "input_contract": true,
+          "output_or_state_contract": true,
+          "scope_authority_boundaries": true,
+          "baseline_measurable": true,
+          "version_and_provenance": true
+        },
+        "passes": true
+      },
+      "maturity": "prototype",
+      "evidence_level": "L1",
+      "effect_hypothesis": "normalizes operator input into goals, constraints, unknowns, and acceptance records; expected Focus, Context Quality, Epistemic Discipline",
+      "measured_effect_vector": "unavailable",
+      "contracts": {
+        "package_path": "printer/prototypes/LENS-INTAKE-001/0.1.0",
+        "package_sha256": "1b974c77370c3908f560be742dfc86eadd6ee2bcaa715afe0c1ee9e74b226c85"
+      },
+      "aberrations": [
+        "nuance loss or invented certainty"
+      ],
+      "external_test_status": "waiting_external_agent",
+      "provenance": {
+        "source": "operator seed candidate plus Foundry compilation",
+        "printer": "scripts/lens-printer.mjs",
+        "doctrine": "LNS-FOUNDRY-DOCTRINE@1.0.0"
+      }
+    },
+    {
+      "lens_id": "LENS-DECISION-001",
+      "name": "Decision Preparation and Escalation",
+      "version": "0.1.0",
+      "classification": {
+        "primary_effect_class": "Objective",
+        "secondary_effect_classes": [
+          "Response",
+          "Prism"
+        ],
+        "scope": "task_family",
+        "authority": "advisory_with_explicit_boundaries",
+        "persistence": "session"
+      },
+      "qualification": {
+        "adjacent_concept_check": {
+          "result": "Lens_Module_candidate",
+          "not_merely": [
+            "doctrine",
+            "prompt",
+            "persona",
+            "skill",
+            "tool",
+            "queue",
+            "memory_store",
+            "report_form",
+            "department",
+            "agent"
+          ]
+        },
+        "answers": {
+          "defined_problem_class": true,
+          "behavioral_transformation": true,
+          "removable": true,
+          "input_contract": true,
+          "output_or_state_contract": true,
+          "scope_authority_boundaries": true,
+          "baseline_measurable": true,
+          "version_and_provenance": true
+        },
+        "passes": true
+      },
+      "maturity": "prototype",
+      "evidence_level": "L1",
+      "effect_hypothesis": "separates evidence, options, reversible defaults, and true operator decisions; expected Goal Retention, Operator Burden, Epistemic Discipline",
+      "measured_effect_vector": "unavailable",
+      "contracts": {
+        "package_path": "printer/prototypes/LENS-DECISION-001/0.1.0",
+        "package_sha256": "3a37c38bcd2e76319543ca7461f48d3f356ef83a118798a7b13779b15ac3062b"
+      },
+      "aberrations": [
+        "tunnel vision or unnecessary escalation"
+      ],
+      "external_test_status": "waiting_external_agent",
+      "provenance": {
+        "source": "operator seed candidate plus Foundry compilation",
+        "printer": "scripts/lens-printer.mjs",
+        "doctrine": "LNS-FOUNDRY-DOCTRINE@1.0.0"
+      }
+    },
+    {
+      "lens_id": "LENS-BOUNDARY-001",
+      "name": "Read-Only Architecture and Evidence Boundary",
+      "version": "0.1.1",
+      "classification": {
+        "primary_effect_class": "Filter",
+        "secondary_effect_classes": [
+          "Prism",
+          "Aperture"
+        ],
+        "scope": "task_family",
+        "authority": "advisory_with_explicit_boundaries",
+        "persistence": "session"
+      },
+      "qualification": {
+        "adjacent_concept_check": {
+          "result": "Lens_Module_candidate",
+          "not_merely": [
+            "doctrine",
+            "prompt",
+            "persona",
+            "skill",
+            "tool",
+            "queue",
+            "memory_store",
+            "report_form",
+            "department",
+            "agent"
+          ]
+        },
+        "answers": {
+          "defined_problem_class": true,
+          "behavioral_transformation": true,
+          "removable": true,
+          "input_contract": true,
+          "output_or_state_contract": true,
+          "scope_authority_boundaries": true,
+          "baseline_measurable": true,
+          "version_and_provenance": true
+        },
+        "passes": true
+      },
+      "maturity": "prototype",
+      "evidence_level": "L1",
+      "effect_hypothesis": "constrains mutation while permitting evidence-gathering reads and labels claims by provenance; expected Boundary Compliance, Epistemic Discipline, Action Precision",
+      "measured_effect_vector": "unavailable",
+      "contracts": {
+        "package_path": "printer/prototypes/LENS-BOUNDARY-001/0.1.1",
+        "package_sha256": "8be6e984fe9ead36bd6a91d9e9fd87c15970514a47883a96e7c5744bb84f5e7b",
+        "digest_method": "printer_canonical_14_file_sha256"
+      },
+      "aberrations": [
+        "overconstraint or false blocking"
+      ],
+      "external_test_status": "waiting_external_agent",
+      "provenance": {
+        "source": "operator seed candidate plus Foundry compilation",
+        "printer": "scripts/lens-printer.mjs",
+        "doctrine": "LNS-FOUNDRY-DOCTRINE@1.0.0"
+      },
+      "latest_revision": "0.1.1"
+    },
+    {
+      "lens_id": "LENS-STATE-001",
+      "name": "Session Reattachment and State Projection",
+      "version": "0.1.0",
+      "classification": {
+        "primary_effect_class": "Memory",
+        "secondary_effect_classes": [
+          "Stabilizer"
+        ],
+        "scope": "task_family",
+        "authority": "advisory_with_explicit_boundaries",
+        "persistence": "session"
+      },
+      "qualification": {
+        "adjacent_concept_check": {
+          "result": "Lens_Module_candidate",
+          "not_merely": [
+            "doctrine",
+            "prompt",
+            "persona",
+            "skill",
+            "tool",
+            "queue",
+            "memory_store",
+            "report_form",
+            "department",
+            "agent"
+          ]
+        },
+        "answers": {
+          "defined_problem_class": true,
+          "behavioral_transformation": true,
+          "removable": true,
+          "input_contract": true,
+          "output_or_state_contract": true,
+          "scope_authority_boundaries": true,
+          "baseline_measurable": true,
+          "version_and_provenance": true
+        },
+        "passes": true
+      },
+      "maturity": "prototype",
+      "evidence_level": "L1",
+      "effect_hypothesis": "reattaches governing pointers and projects only current task state after reset; expected Continuity, Goal Retention, Stability",
+      "measured_effect_vector": "unavailable",
+      "contracts": {
+        "package_path": "printer/prototypes/LENS-STATE-001/0.1.0",
+        "package_sha256": "526b71f0a58c16fd7082a435be056d60f3606a94ccfe883ddf210fe890da0210"
+      },
+      "aberrations": [
+        "stale-state amplification or state divergence"
+      ],
+      "external_test_status": "waiting_external_agent",
+      "provenance": {
+        "source": "operator seed candidate plus Foundry compilation",
+        "printer": "scripts/lens-printer.mjs",
+        "doctrine": "LNS-FOUNDRY-DOCTRINE@1.0.0"
+      }
+    },
+    {
+      "lens_id": "LENS-QUEUE-001",
+      "name": "Planning-before-Queue Admission",
+      "version": "0.1.0",
+      "classification": {
+        "primary_effect_class": "Planning",
+        "secondary_effect_classes": [
+          "Aperture"
+        ],
+        "scope": "task_family",
+        "authority": "advisory_with_explicit_boundaries",
+        "persistence": "session"
+      },
+      "qualification": {
+        "adjacent_concept_check": {
+          "result": "Lens_Module_candidate",
+          "not_merely": [
+            "doctrine",
+            "prompt",
+            "persona",
+            "skill",
+            "tool",
+            "queue",
+            "memory_store",
+            "report_form",
+            "department",
+            "agent"
+          ]
+        },
+        "answers": {
+          "defined_problem_class": true,
+          "behavioral_transformation": true,
+          "removable": true,
+          "input_contract": true,
+          "output_or_state_contract": true,
+          "scope_authority_boundaries": true,
+          "baseline_measurable": true,
+          "version_and_provenance": true
+        },
+        "passes": true
+      },
+      "maturity": "prototype",
+      "evidence_level": "L1",
+      "effect_hypothesis": "compiles requests into dependency-ready tasks before execution admission; expected Coordination, Action Precision, Goal Retention",
+      "measured_effect_vector": "unavailable",
+      "contracts": {
+        "package_path": "printer/prototypes/LENS-QUEUE-001/0.1.0",
+        "package_sha256": "09d2a5057c50a49ab9bd5ec10da984a39215ea703f49878f3e4c427daa5a024b"
+      },
+      "aberrations": [
+        "queue theater or bureaucracy"
+      ],
+      "external_test_status": "waiting_external_agent",
+      "provenance": {
+        "source": "operator seed candidate plus Foundry compilation",
+        "printer": "scripts/lens-printer.mjs",
+        "doctrine": "LNS-FOUNDRY-DOCTRINE@1.0.0"
+      }
+    },
+    {
+      "lens_id": "LENS-REPORT-001",
+      "name": "Operator Overview and Evidence Report",
+      "version": "0.1.0",
+      "classification": {
+        "primary_effect_class": "Response",
+        "secondary_effect_classes": [
+          "Prism"
+        ],
+        "scope": "task_family",
+        "authority": "advisory_with_explicit_boundaries",
+        "persistence": "session"
+      },
+      "qualification": {
+        "adjacent_concept_check": {
+          "result": "Lens_Module_candidate",
+          "not_merely": [
+            "doctrine",
+            "prompt",
+            "persona",
+            "skill",
+            "tool",
+            "queue",
+            "memory_store",
+            "report_form",
+            "department",
+            "agent"
+          ]
+        },
+        "answers": {
+          "defined_problem_class": true,
+          "behavioral_transformation": true,
+          "removable": true,
+          "input_contract": true,
+          "output_or_state_contract": true,
+          "scope_authority_boundaries": true,
+          "baseline_measurable": true,
+          "version_and_provenance": true
+        },
+        "passes": true
+      },
+      "maturity": "prototype",
+      "evidence_level": "L1",
+      "effect_hypothesis": "compresses outcome, provenance, unknowns, blockers, and next action into an operator-facing report; expected Report Fidelity, Operator Burden, Epistemic Discipline",
+      "measured_effect_vector": "unavailable",
+      "contracts": {
+        "package_path": "printer/prototypes/LENS-REPORT-001/0.1.0",
+        "package_sha256": "fe32448f820215e3d9e3a15617ecb659f70633c0b3999c7001b1e5afb4ba4e03"
+      },
+      "aberrations": [
+        "compression loss or report inflation"
+      ],
+      "external_test_status": "waiting_external_agent",
+      "provenance": {
+        "source": "operator seed candidate plus Foundry compilation",
+        "printer": "scripts/lens-printer.mjs",
+        "doctrine": "LNS-FOUNDRY-DOCTRINE@1.0.0"
+      }
+    }
+  ],
+  "lens_sets": [],
+  "compatibility_edges": [],
+  "note": "Six L1 prototypes; no candidate, validated, or catalog_released Lens."
+}

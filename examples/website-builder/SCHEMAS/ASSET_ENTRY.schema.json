@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:superlense:website-builder:asset-entry:1.0.0",
+  "title": "ASSET_ENTRY",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "asset_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "file": {
+      "type": "string"
+    },
+    "asset_type": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "license_status": {
+      "type": "string"
+    },
+    "usage_permission": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "approved": {
+      "type": "boolean"
+    },
+    "technical_quality": {
+      "type": "string"
+    },
+    "web_optimization": {
+      "type": "string"
+    },
+    "alt_text": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "generated_by_ai": {
+      "type": "boolean"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "asset_id",
+    "project_id",
+    "file",
+    "asset_type",
+    "source",
+    "owner",
+    "license_status",
+    "usage_permission",
+    "version",
+    "approved",
+    "technical_quality",
+    "web_optimization",
+    "alt_text",
+    "generated_by_ai",
+    "evidence_ids",
+    "notes"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "approved": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "license_status": {
+            "type": "string",
+            "minLength": 1,
+            "not": {
+              "enum": [
+                "UNKNOWN",
+                "UNRESOLVED",
+                "NOT_CHECKED"
+              ]
+            }
+          },
+          "usage_permission": {
+            "type": "string",
+            "minLength": 1,
+            "not": {
+              "enum": [
+                "UNKNOWN",
+                "UNRESOLVED",
+                "NOT_CHECKED"
+              ]
+            }
+          },
+          "evidence_ids": {
+            "type": "array",
+            "minItems": 1
+          }
+        },
+        "required": [
+          "license_status",
+          "usage_permission",
+          "evidence_ids"
+        ]
+      }
+    }
+  ]
+}

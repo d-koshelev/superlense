@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "candidate_id",
+    "purpose",
+    "target_user",
+    "primary_task",
+    "difference_from_other_candidates",
+    "shared_invariants",
+    "advantages",
+    "costs",
+    "risks",
+    "source_of_truth",
+    "status",
+    "evaluation_criteria",
+    "selection_or_coexistence_condition",
+    "merge_or_retirement_condition"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "target_user": {
+      "type": "string"
+    },
+    "primary_task": {
+      "type": "string"
+    },
+    "difference_from_other_candidates": {
+      "type": "string"
+    },
+    "shared_invariants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "advantages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "costs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_of_truth": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "EXPERIMENTAL",
+        "CANDIDATE",
+        "SELECTED",
+        "SUPPORTED_VARIANT",
+        "DEFERRED",
+        "SUPERSEDED",
+        "RETIRED"
+      ]
+    },
+    "evaluation_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "selection_or_coexistence_condition": {
+      "type": "string"
+    },
+    "merge_or_retirement_condition": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

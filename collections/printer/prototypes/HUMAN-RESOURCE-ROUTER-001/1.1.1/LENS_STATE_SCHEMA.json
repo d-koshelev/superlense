@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "lens_id",
+    "version",
+    "task_id",
+    "status"
+  ],
+  "properties": {
+    "lens_id": {
+      "const": "HUMAN-RESOURCE-ROUTER-001"
+    },
+    "version": {
+      "const": "1.1.1"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "mounted",
+        "applied",
+        "not_triggered",
+        "unmounted",
+        "blocked"
+      ]
+    },
+    "output_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

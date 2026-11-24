@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "lens_set_id": "LSET-HUMAN-WORK-DESIGN-CORE-001",
+  "package_id": "SUPERLENSE-COPILOT-HUMAN-WORK-DESIGN-CORE-001",
+  "name": "Copilot Human Work Design Core",
+  "version": "1.1.1",
+  "package_type": "LensSetPrototype",
+  "role": "DEFAULT_FOUNDATIONAL_LENS_PACK",
+  "layer": 1,
+  "maturity": "prototype",
+  "evidence_level": "L1",
+  "internal_default_loading": true,
+  "external_validation": "unavailable",
+  "modules_total": 13,
+  "provenance": {
+    "operator_source_sha256": "bcd52467305d37597bd774641b32484e37e300b2eb10337d001e1e67072b9fc9",
+    "architecture_audit": "reports/COPILOT_HUMAN_WORK_DESIGN_CORE_ARCHITECTURE_AUDIT.md"
+  },
+  "default_subpacks": [
+    "SUPERLENSE-DESIGN-DIRECTION-CONTROL-001"
+  ]
+}

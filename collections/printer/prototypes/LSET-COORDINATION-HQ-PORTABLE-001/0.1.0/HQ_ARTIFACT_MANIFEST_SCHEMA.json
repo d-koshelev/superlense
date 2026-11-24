@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "artifact_id",
+      "name",
+      "availability",
+      "privacy",
+      "provenance"
+    ],
+    "properties": {
+      "artifact_id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "availability": {
+        "type": "string",
+        "enum": [
+          "accessible",
+          "missing",
+          "unavailable",
+          "superseded",
+          "redacted"
+        ]
+      },
+      "sha256": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "pattern": "^[a-f0-9]{64}$"
+      },
+      "privacy": {
+        "type": "string",
+        "enum": [
+          "private_full",
+          "clean_portable",
+          "public_demo",
+          "excluded"
+        ]
+      },
+      "path_ref": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "provenance": {
+        "type": "array"
+      },
+      "dependencies": {
+        "type": "array"
+      }
+    },
+    "additionalProperties": true
+  }
+}

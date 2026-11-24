@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/provider-profile.schema.json",
+  "type": "object",
+  "required": ["provider_id", "adapter", "probe_status", "independence", "capabilities", "limitations", "last_probe"],
+  "properties": {
+    "provider_id": {"type": "string"},
+    "adapter": {"type": "string"},
+    "probe_status": {"enum": ["unprobed", "available", "unavailable", "auth_blocked", "timeout", "manual_only"]},
+    "independence": {"enum": ["independent_external", "manual_fresh_thread", "self_test_limited"]},
+    "capabilities": {"type": "array"},
+    "limitations": {"type": "array"},
+    "last_probe": {"type": ["string", "null"]}
+  }
+}
+

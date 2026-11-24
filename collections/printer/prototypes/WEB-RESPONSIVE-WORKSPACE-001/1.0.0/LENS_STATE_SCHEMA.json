@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "lens_id",
+    "version",
+    "task_id",
+    "status"
+  ],
+  "properties": {
+    "lens_id": {
+      "const": "WEB-RESPONSIVE-WORKSPACE-001"
+    },
+    "version": {
+      "const": "1.0.0"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "mounted",
+        "applied",
+        "not_triggered",
+        "failed",
+        "blocked_completion"
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

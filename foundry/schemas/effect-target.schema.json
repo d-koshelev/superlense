@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/effect-target.schema.json",
+  "type": "object",
+  "required": ["task_family", "baseline_variants", "desired_effect_vector", "cost_ceiling", "forbidden_effects", "measurement_plan"],
+  "properties": {
+    "task_family": {"type": "string"},
+    "baseline_variants": {"type": "array", "contains": {"const": "RAW"}},
+    "desired_effect_vector": {"type": "object"},
+    "cost_ceiling": {"type": ["object", "string"]},
+    "forbidden_effects": {"type": "array"},
+    "measurement_plan": {"type": "object"}
+  }
+}
+

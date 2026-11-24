@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0.0",
+  "dependencies": [
+    {"name": "Python", "version": "3.14.4", "reason": "runtime and tests", "license": "PSF-2.0"},
+    {"name": "Git", "version_command": "git --version", "reason": "versioned checkpoints and bundle", "license": "GPL-2.0-only"},
+    {"name": "Google Chrome", "version_command": "google-chrome --version", "reason": "real browser rendering and screenshots", "license": "Google Chrome Terms"}
+  ],
+  "python_runtime_dependencies": []
+}

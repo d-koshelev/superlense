@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "record_id",
+      "sequence",
+      "record_type",
+      "authority_class",
+      "source_ref",
+      "availability"
+    ],
+    "properties": {
+      "record_id": {
+        "type": "string"
+      },
+      "sequence": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "record_type": {
+        "type": "string",
+        "enum": [
+          "operator_directive",
+          "external_evidence",
+          "observed_result",
+          "inference",
+          "hypothesis",
+          "knowledge_candidate",
+          "accepted_canonical_knowledge",
+          "contradiction",
+          "unknown",
+          "decision",
+          "proposal",
+          "blocker",
+          "return",
+          "artifact_ref"
+        ]
+      },
+      "authority_class": {
+        "type": "string",
+        "enum": [
+          "operator",
+          "accepted_canonical",
+          "external_evidence",
+          "assistant_proposal",
+          "observation",
+          "inference",
+          "unknown"
+        ]
+      },
+      "source_ref": {
+        "type": "string"
+      },
+      "availability": {
+        "type": "string",
+        "enum": [
+          "visible",
+          "accessible_artifact",
+          "unavailable"
+        ]
+      },
+      "supersedes": {
+        "type": "array"
+      }
+    },
+    "additionalProperties": true
+  }
+}

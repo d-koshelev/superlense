@@ -1,0 +1,6 @@
+# Known and hypothesized aberrations
+
+- Primary risk: false simplicity that ignores safety, scale, or audience diversity.
+- Provider overfit: unavailable.
+- Cross-provider behavioral effect: unavailable.
+- Hard failures: HYPOTHETICAL_FUTURE_DOMINATES_CURRENT_NEED, SUBSYSTEM_REPLACES_SMALL_CORRECTION, COMPLEXITY_WITHOUT_USER_BENEFIT, CONFIGURATION_INSTEAD_OF_GOOD_DEFAULT, ABSTRACTION_LAYERS_FOR_ONE_USE_CASE, MAINTENANCE_COST_EXCEEDS_PROBABLE_VALUE, SOPHISTICATION_AS_PRIMARY_JUSTIFICATION, JUSTIFIED_COMPLEXITY_FALSELY_REJECTED.

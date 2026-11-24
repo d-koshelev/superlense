@@ -1,0 +1,42 @@
+{
+  "fixture_id": "PRINTER-FIXTURE-v1",
+  "order_digest": "74c1cd997a87dbd442002058a7a140c8b594061b8cb25da9432f581d74091980",
+  "expected_file_count": 14,
+  "expected_names": [
+    "LENS_MANIFEST.json",
+    "LENS_DOCTRINE.md",
+    "LENS_INSTALLER.md",
+    "LENS_SET_COMPOSITION.json",
+    "LENS_EFFECT_HYPOTHESIS.md",
+    "LENS_INPUT_CONTRACT.md",
+    "LENS_OUTPUT_CONTRACT.md",
+    "LENS_STATE_SCHEMA.json",
+    "LENS_TEST_SUBJECT_PROMPT.md",
+    "LENS_TEST_PLAN.md",
+    "LENS_EXPECTED_OUTPUT.schema.json",
+    "LENS_ABLATION_MATRIX.md",
+    "LENS_KNOWN_ABERRATIONS.md",
+    "LENS_CLEAN_EXPORT_PROFILE.md"
+  ],
+  "first_run": {
+    "run_id": "PRINT-FIXTURE-0001",
+    "status": "static_valid",
+    "input_ref": "orders/LORD-REPO-MIGRATION-001.json",
+    "outputs": [
+      "printer/prototypes/LENS-FIXTURE-001/0.1.0"
+    ],
+    "validation": {
+      "valid": true,
+      "missing": [],
+      "unexpected": [],
+      "invalid_json": [],
+      "secret_hits": [],
+      "test_leak_hits": [],
+      "package_sha256": "9a6937d1e489ca40eb6c8ecd3944bd6d9421a5527ba2b7cbc72a33e1a9b5787c"
+    },
+    "package_digest": "9a6937d1e489ca40eb6c8ecd3944bd6d9421a5527ba2b7cbc72a33e1a9b5787c",
+    "started_at": "2026-07-10T23:49:53.867Z",
+    "finished_at": "2026-07-10T23:49:53.881Z",
+    "determinism": "re-run digest compared by validator"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "set_id": "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001-SOLO",
+  "version": "1.0.0",
+  "ordered_modules": [
+    "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001"
+  ],
+  "layer": 1,
+  "priority": 47,
+  "context_budget": {
+    "rule_count": 8,
+    "policy": "compact_contract_only"
+  },
+  "authority_check": {
+    "result": "pass",
+    "operator_final": true,
+    "layer_0_overrides": true
+  },
+  "compatibility_check": {
+    "result": "static_pass",
+    "compatible_lenses": [
+      "LSET-HUMAN-WORK-DESIGN-CORE-001",
+      "HUMAN-PRIMARY-WORK-001",
+      "HUMAN-AUDIENCE-AND-CONTEXT-001",
+      "HUMAN-AGENT-MUTUAL-UNDERSTANDING-001",
+      "DESIGN-ERROR-FIRST-CRITIQUE-001",
+      "DESIGN-OPERATOR-AGENCY-001",
+      "LAYER_0_GUARDRAILS",
+      "PROVIDER_ADAPTER",
+      "DOMAIN_SPECIALIZATION",
+      "PROJECT_CONTEXT"
+    ]
+  }
+}

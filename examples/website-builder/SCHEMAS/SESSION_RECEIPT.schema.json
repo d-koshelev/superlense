@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:superlense:website-builder:session-receipt:1.0.0",
+  "title": "SESSION_RECEIPT",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "state_id": {
+      "type": "string"
+    },
+    "active_project_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "completed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "codex_invocations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "prompts_drafted": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "prompts_sent": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "evidence_reviewed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "unresolved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "next_gate": {
+      "type": "string"
+    },
+    "operator_acceptance": {
+      "enum": [
+        "PENDING",
+        "ACCEPTED",
+        "REJECTED",
+        "REVISION_REQUIRED"
+      ]
+    },
+    "operator_acceptance_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "acceptance_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "session_id",
+    "state_id",
+    "active_project_id",
+    "completed",
+    "decisions",
+    "codex_invocations",
+    "prompts_drafted",
+    "prompts_sent",
+    "evidence_reviewed",
+    "unresolved",
+    "next_gate",
+    "operator_acceptance",
+    "operator_acceptance_id",
+    "acceptance_evidence_ids"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "operator_acceptance": {
+            "const": "ACCEPTED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "operator_acceptance_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptance_evidence_ids": {
+            "type": "array",
+            "minItems": 1
+          }
+        },
+        "required": [
+          "operator_acceptance_id",
+          "acceptance_evidence_ids"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "design_direction_status",
+    "primary_work",
+    "detected_problem",
+    "why_current_direction_is_unsafe",
+    "preserve",
+    "required_correction",
+    "deferred",
+    "operator_override_or_none"
+  ],
+  "properties": {
+    "design_direction_status": {},
+    "primary_work": {},
+    "detected_problem": {},
+    "why_current_direction_is_unsafe": {},
+    "preserve": {},
+    "required_correction": {},
+    "deferred": {},
+    "operator_override_or_none": {}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "primary_focus",
+    "deferred_noise",
+    "current_decision_detail",
+    "context_protection"
+  ],
+  "properties": {
+    "primary_focus": {},
+    "deferred_noise": {},
+    "current_decision_detail": {},
+    "context_protection": {}
+  },
+  "additionalProperties": true
+}

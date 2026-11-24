@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "lens_id",
+    "version",
+    "status",
+    "order_id"
+  ],
+  "properties": {
+    "lens_id": {
+      "type": "string",
+      "const": "LENS-HQVISIBLE-001"
+    },
+    "version": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "mounted",
+        "unmounted",
+        "blocked",
+        "stale"
+      ]
+    },
+    "order_id": {
+      "type": "string",
+      "const": "LORD-HQ-PORTABILITY-001"
+    },
+    "state_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

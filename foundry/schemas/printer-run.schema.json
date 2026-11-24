@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/printer-run.schema.json",
+  "type": "object",
+  "required": ["run_id", "status", "input_ref", "outputs", "validation", "package_digest", "started_at", "finished_at"],
+  "properties": {
+    "status": {"enum": ["printing", "static_valid", "static_failed", "exported"]},
+    "outputs": {"type": "array"},
+    "validation": {"type": "object"},
+    "package_digest": {"type": "string"}
+  }
+}
+

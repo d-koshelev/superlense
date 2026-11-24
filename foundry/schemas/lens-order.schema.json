@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/lens-order.schema.json",
+  "title": "Lens Order",
+  "type": "object",
+  "required": ["order_id", "status", "representative_test_prompt", "task_family", "effect_targets", "boundaries", "acceptance_criteria", "external_test_plan", "provenance"],
+  "properties": {
+    "order_id": {"pattern": "^LORD-[A-Z0-9-]+$"},
+    "status": {"enum": ["intake", "compiled", "printing", "testing", "waiting_external_agent", "release_review", "done", "cancelled"]},
+    "representative_test_prompt": {"type": "string", "minLength": 20},
+    "task_family": {"type": "string"},
+    "effect_targets": {"type": "array", "minItems": 1},
+    "boundaries": {"type": "object"},
+    "acceptance_criteria": {"type": "array", "minItems": 1},
+    "external_test_plan": {"type": "object"},
+    "provenance": {"type": "object"}
+  },
+  "additionalProperties": true
+}
+

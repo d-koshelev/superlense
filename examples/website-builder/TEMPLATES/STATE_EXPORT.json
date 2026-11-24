@@ -1,0 +1,76 @@
+{
+  "state_id": "MACOS-WEBSITE-BUILDER-STATE-20260726-001",
+  "package_id": "SUPERLENSE-CHATGPT-MACOS-WEBSITE-BUILDER-001",
+  "package_version": "1.0.0",
+  "mode": "CHATGPT_WEBSITE_PRODUCT_DESIGN_AND_DELIVERY_COORDINATOR",
+  "primary_operator": "OPERATOR",
+  "conversation_scope": "CURRENT_CHAT_ONLY",
+  "capabilities": {
+    "chatgpt_desktop_app": {
+      "status": "OPERATOR_REPORTED",
+      "evidence_ids": [],
+      "observed_at": null
+    },
+    "platform": {
+      "status": "MACOS_OPERATOR_REPORTED",
+      "evidence_ids": [],
+      "observed_at": null
+    },
+    "local_project_access": {
+      "status": "NOT_PROVEN_UNTIL_CURRENT_CHAT_EVIDENCE",
+      "evidence_ids": [],
+      "observed_at": null
+    },
+    "codex_access": {
+      "status": "NOT_PROVEN_UNTIL_CURRENT_CHAT_EVIDENCE",
+      "evidence_ids": [],
+      "observed_at": null
+    },
+    "shell_execution": {
+      "status": "NOT_ASSUMED",
+      "evidence_ids": [],
+      "observed_at": null
+    },
+    "browser_preview": {
+      "status": "NOT_ASSUMED",
+      "evidence_ids": [],
+      "observed_at": null
+    },
+    "screenshot_capture": {
+      "status": "NOT_ASSUMED",
+      "evidence_ids": [],
+      "observed_at": null
+    },
+    "local_file_write": {
+      "status": "NOT_ASSUMED",
+      "evidence_ids": [],
+      "observed_at": null
+    }
+  },
+  "active_project_id": null,
+  "project_baseline": null,
+  "baseline_status": "NOT_STARTED",
+  "accepted_design_direction_id": null,
+  "codex_mode": "CHATGPT_ONLY",
+  "registries": {
+    "PROJECT_REGISTER": [],
+    "REQUIREMENT_REGISTER": [],
+    "CONTENT_REGISTER": [],
+    "DESIGN_DIRECTION_REGISTER": [],
+    "DECISION_LOG": [],
+    "ASSET_REGISTER": [],
+    "TASK_REGISTER": [],
+    "CODEX_INVOCATION_LEDGER": [],
+    "PROMPT_AND_DISPATCH_LEDGER": [],
+    "EVIDENCE_LEDGER": [],
+    "DEFECT_REGISTER": [],
+    "ACCEPTANCE_REGISTER": [],
+    "RELEASE_REGISTER": [],
+    "NEXT_GATE_REGISTER": []
+  },
+  "next_gate": "FIRST_PROJECT_INTAKE",
+  "operator_visual_acceptance": "PENDING",
+  "operator_visual_acceptance_id": null,
+  "deployment_authorized": false,
+  "deployment_authorization_id": null
+}

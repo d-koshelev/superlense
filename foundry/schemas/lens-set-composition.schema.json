@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/lens-set-composition.schema.json",
+  "type": "object",
+  "required": ["set_id", "version", "ordered_modules", "context_budget", "authority_check", "compatibility_check"],
+  "properties": {
+    "set_id": {"type": "string"},
+    "version": {"pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "ordered_modules": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "context_budget": {"type": "object"},
+    "authority_check": {"type": "object"},
+    "compatibility_check": {"type": "object"}
+  }
+}
+

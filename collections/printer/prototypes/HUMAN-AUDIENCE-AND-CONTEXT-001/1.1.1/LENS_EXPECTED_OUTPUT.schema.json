@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "audience_profile",
+    "context_constraints",
+    "density_level",
+    "terminology_level",
+    "guidance_level"
+  ],
+  "properties": {
+    "audience_profile": {},
+    "context_constraints": {},
+    "density_level": {},
+    "terminology_level": {},
+    "guidance_level": {}
+  },
+  "additionalProperties": true
+}

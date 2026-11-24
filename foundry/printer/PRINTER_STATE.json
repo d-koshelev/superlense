@@ -1,0 +1,51 @@
+{
+  "state_id": "PRINTER-STATE-0001",
+  "updated_at": "2026-07-10T23:55:14.135Z",
+  "status": "ready",
+  "active_run": null,
+  "runs": [
+    {
+      "run_id": "PRINT-FIXTURE-0001",
+      "status": "static_valid",
+      "input_ref": "orders/LORD-REPO-MIGRATION-001.json",
+      "outputs": [
+        "printer/prototypes/LENS-FIXTURE-001/0.1.0"
+      ],
+      "validation": {
+        "valid": true,
+        "missing": [],
+        "unexpected": [],
+        "invalid_json": [],
+        "secret_hits": [],
+        "test_leak_hits": [],
+        "package_sha256": "9a6937d1e489ca40eb6c8ecd3944bd6d9421a5527ba2b7cbc72a33e1a9b5787c"
+      },
+      "package_digest": "9a6937d1e489ca40eb6c8ecd3944bd6d9421a5527ba2b7cbc72a33e1a9b5787c",
+      "started_at": "2026-07-10T23:49:53.867Z",
+      "finished_at": "2026-07-10T23:49:53.881Z",
+      "determinism": "re-run digest compared by validator"
+    },
+    {
+      "run_id": "PRINT-SEEDS-0001",
+      "status": "static_valid",
+      "input_ref": "operator seed inventory",
+      "outputs": [
+        "printer/prototypes/LENS-INTAKE-001/0.1.0",
+        "printer/prototypes/LENS-DECISION-001/0.1.0",
+        "printer/prototypes/LENS-BOUNDARY-001/0.1.0",
+        "printer/prototypes/LENS-STATE-001/0.1.0",
+        "printer/prototypes/LENS-QUEUE-001/0.1.0",
+        "printer/prototypes/LENS-REPORT-001/0.1.0"
+      ],
+      "validation": {
+        "packages": 6,
+        "valid": 6,
+        "behavioral_effect": "unavailable"
+      },
+      "package_digest": "057af135ba3bb1ab44b038d9cfa158e399f0efc16a4f8293e8c108beba0e85a2",
+      "started_at": "2026-07-10T23:55:14.134Z",
+      "finished_at": "2026-07-10T23:55:14.134Z"
+    }
+  ],
+  "semantic_version_policy": "doctrine/VERSIONING_AND_MATURITY.md"
+}

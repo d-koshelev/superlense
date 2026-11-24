@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "composition_id": "LENS-HQARTIFACT-001-SELF",
+  "modules": [
+    {
+      "lens_id": "LENS-HQARTIFACT-001",
+      "version": "0.1.0",
+      "required": true
+    }
+  ],
+  "removable": true,
+  "compatibility_status": "static_only"
+}

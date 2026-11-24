@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["probe", "mode", "files_read", "files_written"],
+  "properties": {
+    "probe": {"const": "ok"},
+    "mode": {"const": "read_only_synthetic"},
+    "files_read": {"const": 0},
+    "files_written": {"const": 0}
+  },
+  "additionalProperties": false
+}
+

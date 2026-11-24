@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "parallel_architecture_status",
+    "candidate_records",
+    "shared_invariants",
+    "source_of_truth",
+    "evaluation_criteria",
+    "selection_or_coexistence_condition",
+    "merge_or_retirement_condition",
+    "operator_override_or_none"
+  ],
+  "properties": {
+    "parallel_architecture_status": {},
+    "candidate_records": {},
+    "shared_invariants": {},
+    "source_of_truth": {},
+    "evaluation_criteria": {},
+    "selection_or_coexistence_condition": {},
+    "merge_or_retirement_condition": {},
+    "operator_override_or_none": {}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "focus_work",
+    "decision_work",
+    "routine_work",
+    "review_work",
+    "maintenance_work",
+    "compute_choice"
+  ],
+  "properties": {
+    "focus_work": {},
+    "decision_work": {},
+    "routine_work": {},
+    "review_work": {},
+    "maintenance_work": {},
+    "compute_choice": {}
+  },
+  "additionalProperties": true
+}

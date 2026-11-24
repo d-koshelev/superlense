@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/canonical-queue.schema.json",
+  "title": "Single-Copilot Foundry Canonical Queue",
+  "type": "object",
+  "required": ["queue_id", "tasks_total", "active_task", "tasks"],
+  "properties": {
+    "queue_id": {"type": "string"},
+    "tasks_total": {"const": 67},
+    "active_task": {"type": ["string", "null"]},
+    "tasks": {
+      "type": "array",
+      "minItems": 67,
+      "maxItems": 67,
+      "items": {
+        "type": "object",
+        "required": ["task_id", "phase", "lane", "title", "dependencies", "priority", "risk", "status", "worker", "execution_mode"],
+        "properties": {
+          "task_id": {"pattern": "^LFND-[0-9]{4}$"},
+          "phase": {"type": "integer", "minimum": 0, "maximum": 8},
+          "dependencies": {"type": "array", "items": {"pattern": "^LFND-[0-9]{4}$"}},
+          "status": {"enum": ["planned", "claimed", "running", "done", "blocked", "cancelled", "superseded"]},
+          "worker": {"const": "single-copilot"},
+          "execution_mode": {"const": "sequential"}
+        }
+      }
+    }
+  }
+}
+

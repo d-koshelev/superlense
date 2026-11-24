@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:superlense:website-builder:defect-entry:1.0.0",
+  "title": "DEFECT_ENTRY",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "defect_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "severity": {
+      "enum": [
+        "HARD_FAILURE",
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "observed_failure": {
+      "type": "string"
+    },
+    "user_consequence": {
+      "type": "string"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "requirement_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "OPEN",
+        "FIXED",
+        "VERIFIED",
+        "FALSE_POSITIVE",
+        "SUPERSEDED"
+      ]
+    }
+  },
+  "required": [
+    "defect_id",
+    "project_id",
+    "severity",
+    "observed_failure",
+    "user_consequence",
+    "evidence_ids",
+    "requirement_id",
+    "status"
+  ]
+}

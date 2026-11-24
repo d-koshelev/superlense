@@ -1,0 +1,16 @@
+{
+  "harness_id": "LENS-TEST-HARNESS-v1",
+  "variants": {
+    "RAW": "Representative prompt only; no Lens behavior.",
+    "MINIMAL": "Shortest explicit goal and safety boundary; no Lens package.",
+    "LENS": "Full public Lens Set package.",
+    "ABLATION": "One named Lens mechanism removed; evaluator compares diagnostic effect.",
+    "STRESS": "Long/noisy/conflicting context within safety limits.",
+    "RESET": "Fresh session receives only the declared reattachment package.",
+    "PORTABILITY": "Equivalent package run on another provider/model profile when available."
+  },
+  "required_baselines": ["RAW", "MINIMAL"],
+  "metrics_policy": "unavailable_not_zero",
+  "independence_policy": "self-test cannot satisfy external evidence levels"
+}
+

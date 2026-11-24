@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "lens_id": "LENS-QUEUE-001",
+  "name": "Planning-before-Queue Admission",
+  "version": "0.1.0",
+  "package_type": "LensModulePrototype",
+  "classification": {
+    "primary_effect_class": "Planning",
+    "secondary_effect_classes": [
+      "Aperture"
+    ],
+    "scope": "task_family",
+    "authority": "advisory_with_explicit_boundaries",
+    "persistence": "session"
+  },
+  "adjacent_concept_check": {
+    "result": "Lens_Module_candidate",
+    "not_merely": [
+      "doctrine",
+      "prompt",
+      "persona",
+      "skill",
+      "tool",
+      "queue",
+      "memory_store",
+      "report_form",
+      "department",
+      "agent"
+    ]
+  },
+  "qualification": {
+    "answers": {
+      "defined_problem_class": true,
+      "behavioral_transformation": true,
+      "removable": true,
+      "input_contract": true,
+      "output_or_state_contract": true,
+      "scope_authority_boundaries": true,
+      "baseline_measurable": true,
+      "version_and_provenance": true
+    },
+    "passes": true
+  },
+  "maturity": "prototype",
+  "evidence_level": "L1",
+  "external_validation": "waiting_external_agent",
+  "provenance": {
+    "source": "operator seed candidate plus Foundry compilation",
+    "printer": "scripts/lens-printer.mjs",
+    "doctrine": "LNS-FOUNDRY-DOCTRINE@1.0.0"
+  }
+}

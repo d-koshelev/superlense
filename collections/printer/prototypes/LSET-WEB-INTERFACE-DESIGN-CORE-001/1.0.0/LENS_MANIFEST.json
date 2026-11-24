@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "lens_set_id": "LSET-WEB-INTERFACE-DESIGN-CORE-001",
+  "package_id": "SUPERLENSE-COPILOT-WEB-INTERFACE-DESIGN-CORE-001",
+  "version": "1.0.0",
+  "package_type": "ConditionalDefaultDomainLensSet",
+  "module_count": 8,
+  "ordered_modules": [
+    "WEB-PRIMARY-TASK-FIRST-001",
+    "WEB-INFORMATION-PRIORITY-001",
+    "WEB-USER-FLOW-BEFORE-SCREEN-001",
+    "WEB-REAL-CONTENT-FIRST-001",
+    "WEB-INTERACTION-STATES-001",
+    "WEB-RESPONSIVE-WORKSPACE-001",
+    "WEB-VISUAL-HIERARCHY-AND-DENSITY-001",
+    "WEB-ERROR-FIRST-VISUAL-QA-001"
+  ],
+  "default_loading": "AUTO_CONDITIONAL_WEB_INTERFACE_TASK",
+  "global_default_loading": false,
+  "composition_layer": 3,
+  "maturity": "prototype",
+  "evidence_level": "L1",
+  "external_behavioral_effect": "unavailable",
+  "browser_evidence_required": true,
+  "completion_gate_required": true,
+  "parallel_architecture_created": false
+}

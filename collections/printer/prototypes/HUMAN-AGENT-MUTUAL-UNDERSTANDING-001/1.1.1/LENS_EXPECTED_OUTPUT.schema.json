@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "alignment_state",
+    "material_problem_or_none",
+    "assumptions",
+    "unknowns",
+    "operator_override_or_none"
+  ],
+  "properties": {
+    "alignment_state": {},
+    "material_problem_or_none": {},
+    "assumptions": {},
+    "unknowns": {},
+    "operator_override_or_none": {}
+  },
+  "additionalProperties": true
+}

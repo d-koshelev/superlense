@@ -1,0 +1,46 @@
+{
+  "$schema": "../../../../schemas/lens-set-composition.schema.json",
+  "set_id": "LSET-DESIGN-DIRECTION-CONTROL-001",
+  "lens_set_id": "LSET-DESIGN-DIRECTION-CONTROL-001",
+  "package_id": "SUPERLENSE-DESIGN-DIRECTION-CONTROL-001",
+  "version": "1.0.0",
+  "ordered_modules": [
+    "DESIGN-STOP-AND-REVIEW-GATE-001",
+    "DESIGN-OVERENGINEERING-CONTROL-001",
+    "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001"
+  ],
+  "module_versions": [
+    {
+      "lens_id": "DESIGN-STOP-AND-REVIEW-GATE-001",
+      "version": "1.0.0",
+      "disposition": "REUSED_FROM_PARENT_DEFAULT_SET"
+    },
+    {
+      "lens_id": "DESIGN-OVERENGINEERING-CONTROL-001",
+      "version": "1.0.0",
+      "disposition": "CREATED_BY_SUBPACK"
+    },
+    {
+      "lens_id": "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+      "version": "1.0.0",
+      "disposition": "CREATED_BY_SUBPACK"
+    }
+  ],
+  "context_budget": {
+    "policy": "DEDUPLICATED_IN_PARENT_LAYER_1_RUNTIME",
+    "duplicated_runtime_contracts": 0
+  },
+  "authority_check": {
+    "result": "pass",
+    "operator_final": true,
+    "override_recorded_once": true
+  },
+  "compatibility_check": {
+    "result": "static_pass",
+    "parent_set": "LSET-HUMAN-WORK-DESIGN-CORE-001",
+    "provider_neutral": true,
+    "project_state_created": false
+  },
+  "removable": true,
+  "canonical_replacement_permitted": false
+}

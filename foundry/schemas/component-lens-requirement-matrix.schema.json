@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/component-lens-requirement-matrix.schema.json",
+  "type": "object",
+  "required": ["matrix_id", "component_id", "risk", "behaviors", "required_modules", "catalog_resolution", "missing_lens_orders", "gate_decision"],
+  "properties": {
+    "risk": {"enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]},
+    "behaviors": {"type": "array", "minItems": 1},
+    "required_modules": {"type": "array", "minItems": 1},
+    "catalog_resolution": {"type": "array"},
+    "missing_lens_orders": {"type": "array"},
+    "gate_decision": {"enum": ["pass", "hold", "reject", "conditional_test_scaffold"]}
+  }
+}
+

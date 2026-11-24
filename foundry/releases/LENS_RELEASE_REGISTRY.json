@@ -1,0 +1,16 @@
+{
+  "registry_id": "LENS-RELEASES-v1",
+  "updated_at": "2026-07-10T23:56:00Z",
+  "releases": [],
+  "decisions": [
+    {"decision_id": "LREL-REVIEW-INTAKE-001", "lens_id": "LENS-INTAKE-001", "version": "0.1.0", "decision": "held", "required_evidence": {"minimum": "L4", "external": true}, "observed_evidence": {"level": "L1", "static_package": "pass", "independent_runs": 0}, "unknowns": ["behavioral effect", "stability", "portability", "cost", "latency"], "reviewed_at": "2026-07-10T23:56:00Z"},
+    {"decision_id": "LREL-REVIEW-DECISION-001", "lens_id": "LENS-DECISION-001", "version": "0.1.0", "decision": "held", "required_evidence": {"minimum": "L4", "external": true}, "observed_evidence": {"level": "L1", "static_package": "pass", "independent_runs": 0}, "unknowns": ["behavioral effect", "stability", "portability", "cost", "latency"], "reviewed_at": "2026-07-10T23:56:00Z"},
+    {"decision_id": "LREL-REVIEW-BOUNDARY-001", "lens_id": "LENS-BOUNDARY-001", "version": "0.1.1", "decision": "held", "required_evidence": {"minimum": "L4", "external": true}, "observed_evidence": {"level": "L1", "static_package": "pass", "independent_runs": 0, "static_revision": "pass"}, "unknowns": ["false-blocking behavior", "boundary effect", "stress regression", "portability", "cost", "latency"], "reviewed_at": "2026-07-10T23:56:00Z"},
+    {"decision_id": "LREL-REVIEW-STATE-001", "lens_id": "LENS-STATE-001", "version": "0.1.0", "decision": "held", "required_evidence": {"minimum": "L4", "external": true}, "observed_evidence": {"level": "L1", "static_package": "pass", "independent_runs": 0}, "unknowns": ["reset continuity effect", "stale-state risk", "portability", "cost", "latency"], "reviewed_at": "2026-07-10T23:56:00Z"},
+    {"decision_id": "LREL-REVIEW-QUEUE-001", "lens_id": "LENS-QUEUE-001", "version": "0.1.0", "decision": "held", "required_evidence": {"minimum": "L4", "external": true}, "observed_evidence": {"level": "L1", "static_package": "pass", "independent_runs": 0}, "unknowns": ["coordination effect", "queue-theater risk", "portability", "cost", "latency"], "reviewed_at": "2026-07-10T23:56:00Z"},
+    {"decision_id": "LREL-REVIEW-REPORT-001", "lens_id": "LENS-REPORT-001", "version": "0.1.0", "decision": "held", "required_evidence": {"minimum": "L4", "external": true}, "observed_evidence": {"level": "L1", "static_package": "pass", "independent_runs": 0}, "unknowns": ["report fidelity effect", "compression loss", "portability", "cost", "latency"], "reviewed_at": "2026-07-10T23:56:00Z"}
+  ],
+  "promotion_policy": "doctrine evidence-level gates",
+  "external_publication": false,
+  "summary": "No Lens released; six prototypes held at L1 pending independent evidence."
+}

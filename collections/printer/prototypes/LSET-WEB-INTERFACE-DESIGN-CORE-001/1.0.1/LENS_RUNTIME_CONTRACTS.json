@@ -1,0 +1,381 @@
+{
+  "package_id": "SUPERLENSE-COPILOT-WEB-INTERFACE-DESIGN-CORE-001",
+  "package_version": "1.0.1",
+  "lens_set_id": "LSET-WEB-INTERFACE-DESIGN-CORE-001",
+  "contracts": [
+    {
+      "lens_id": "WEB-PRIMARY-TASK-FIRST-001",
+      "version": "1.0.1",
+      "purpose": "Identify the user's main continuous activity and protect its workspace, position, and shortest interaction path.",
+      "trigger": "Every meaningful web workspace, dashboard, editor, form, control panel, or browser-interface decision.",
+      "required_inputs": [
+        "primary_user",
+        "primary_task",
+        "continuous_activity",
+        "supporting_tools",
+        "workspace_allocation"
+      ],
+      "simple_rules": [
+        "Identify the user's main continuous activity before allocating the screen.",
+        "Give the primary task the best position, most useful space, and shortest path.",
+        "Keep frequent support reachable without covering the work field.",
+        "Move setup and maintenance outside the continuous work field.",
+        "Fail when secondary panels or status compress the primary task.",
+        "Verify the protected work field with real content at target sizes.",
+        "On an orientation homepage, expose one dominant decision or next action and keep alternate paths contextual."
+      ],
+      "required_output": [
+        "primary_user",
+        "primary_task",
+        "protected_work_field",
+        "support_placement",
+        "primary_task_failures"
+      ],
+      "hard_failures": [
+        "PRIMARY_EDITOR_COMPRESSED",
+        "SETUP_DISPLACES_PRIMARY_WORK",
+        "SECONDARY_TOOLS_DOMINATE",
+        "PRIMARY_ACTION_PATH_UNNECESSARILY_LONG",
+        "COMPETING_NEXT_ACTIONS_ON_ORIENTATION_SURFACE"
+      ],
+      "compatible_lenses": [
+        "LSET-HUMAN-WORK-DESIGN-CORE-001",
+        "SUPERLENSE-DESIGN-DIRECTION-CONTROL-001",
+        "DESIGN-STOP-AND-REVIEW-GATE-001",
+        "DESIGN-OVERENGINEERING-CONTROL-001",
+        "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+        "PROVIDER_ADAPTER",
+        "PROJECT_CONTEXT"
+      ]
+    },
+    {
+      "lens_id": "WEB-INFORMATION-PRIORITY-001",
+      "version": "1.0.1",
+      "purpose": "Classify web-interface information by operational importance and avoid permanent equal-weight display.",
+      "trigger": "Before arranging labels, data, help, status, setup, maintenance, or diagnostics in a web interface.",
+      "required_inputs": [
+        "information_items",
+        "user_decisions",
+        "frequency",
+        "urgency",
+        "error_cost"
+      ],
+      "simple_rules": [
+        "Classify each item as CRITICAL, PRIMARY, SUPPORTING, CONTEXTUAL, SETUP, or MAINTENANCE.",
+        "Do not display every class permanently or with equal visual weight.",
+        "Keep PRIMARY information continuously available for the current task.",
+        "Show CRITICAL information immediately but only when it is truly critical.",
+        "Reveal CONTEXTUAL, SETUP, and MAINTENANCE information at the relevant moment.",
+        "Place technical detail below the user result unless the audience needs it continuously.",
+        "Promote missing information that blocks progress above routine summaries and normal status.",
+        "Keep healthy routine system state visually quiet and expose technical setup contextually unless it changes the current decision."
+      ],
+      "required_output": [
+        "critical",
+        "primary",
+        "supporting",
+        "contextual",
+        "setup",
+        "maintenance",
+        "display_policy"
+      ],
+      "hard_failures": [
+        "FLAT_WEB_INFORMATION_PRIORITY",
+        "CRITICAL_STATE_HIDDEN",
+        "PRIMARY_INFORMATION_DISPLACED",
+        "MAINTENANCE_PERMANENTLY_DOMINANT",
+        "BLOCKING_MISSING_DATA_BURIED",
+        "NORMAL_STATUS_COMPETES_WITH_DECISION"
+      ],
+      "compatible_lenses": [
+        "LSET-HUMAN-WORK-DESIGN-CORE-001",
+        "SUPERLENSE-DESIGN-DIRECTION-CONTROL-001",
+        "DESIGN-STOP-AND-REVIEW-GATE-001",
+        "DESIGN-OVERENGINEERING-CONTROL-001",
+        "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+        "PROVIDER_ADAPTER",
+        "PROJECT_CONTEXT"
+      ]
+    },
+    {
+      "lens_id": "WEB-USER-FLOW-BEFORE-SCREEN-001",
+      "version": "1.0.1",
+      "purpose": "Define the real user flow before implementing isolated screens or static mockups.",
+      "trigger": "Before implementing a new screen, route, modal, form, dashboard, or multi-step web interaction.",
+      "required_inputs": [
+        "entry",
+        "user_goal",
+        "required_decisions",
+        "primary_action",
+        "system_feedback",
+        "result",
+        "next_destination"
+      ],
+      "simple_rules": [
+        "Record entry, goal, decisions, primary action, feedback, result, and next destination.",
+        "Do not implement an isolated screen without its workflow context.",
+        "Keep required decisions close to the action they affect.",
+        "Make feedback describe what changed and what happens next.",
+        "Preserve task continuity across routes, dialogs, and responsive modes.",
+        "Test the flow from entry through result with real interaction.",
+        "Use one understandable navigation hierarchy for the current surface; duplicate mechanisms must not compete."
+      ],
+      "required_output": [
+        "user_flow",
+        "decision_points",
+        "primary_action",
+        "feedback_contract",
+        "next_destination"
+      ],
+      "hard_failures": [
+        "STATIC_SCREEN_WITHOUT_FLOW",
+        "PRIMARY_ACTION_MISSING",
+        "SYSTEM_FEEDBACK_MISSING",
+        "DEAD_END_RESULT",
+        "COMPETING_NAVIGATION_HIERARCHIES"
+      ],
+      "compatible_lenses": [
+        "LSET-HUMAN-WORK-DESIGN-CORE-001",
+        "SUPERLENSE-DESIGN-DIRECTION-CONTROL-001",
+        "DESIGN-STOP-AND-REVIEW-GATE-001",
+        "DESIGN-OVERENGINEERING-CONTROL-001",
+        "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+        "PROVIDER_ADAPTER",
+        "PROJECT_CONTEXT"
+      ]
+    },
+    {
+      "lens_id": "WEB-REAL-CONTENT-FIRST-001",
+      "version": "1.0.1",
+      "purpose": "Validate web layouts and interactions with realistic, missing, long, nested, multilingual, and extreme content.",
+      "trigger": "During implementation and before accepting any web layout, component, list, table, editor, or data view.",
+      "required_inputs": [
+        "realistic_content_cases",
+        "long_values",
+        "empty_values",
+        "error_values",
+        "large_lists",
+        "nested_structures",
+        "languages",
+        "missing_assets"
+      ],
+      "simple_rules": [
+        "Test long names, messages, labels, and unbroken values.",
+        "Test empty values, errors, and missing assets.",
+        "Test large lists and nested structures without idealized truncation.",
+        "Test different languages and unusually large and small values.",
+        "Preserve meaning when content wraps, truncates, scrolls, or expands.",
+        "Reject layouts that pass only with ideal demo content."
+      ],
+      "required_output": [
+        "real_content_cases",
+        "observed_breakages",
+        "content_handling",
+        "corrections",
+        "remaining_limits"
+      ],
+      "hard_failures": [
+        "IDEAL_DEMO_CONTENT_ONLY",
+        "LONG_CONTENT_BREAKS_LAYOUT",
+        "EMPTY_OR_ERROR_STATE_MISSING",
+        "MISSING_ASSET_BREAKS_TASK"
+      ],
+      "compatible_lenses": [
+        "LSET-HUMAN-WORK-DESIGN-CORE-001",
+        "SUPERLENSE-DESIGN-DIRECTION-CONTROL-001",
+        "DESIGN-STOP-AND-REVIEW-GATE-001",
+        "DESIGN-OVERENGINEERING-CONTROL-001",
+        "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+        "PROVIDER_ADAPTER",
+        "PROJECT_CONTEXT"
+      ]
+    },
+    {
+      "lens_id": "WEB-INTERACTION-STATES-001",
+      "version": "1.0.1",
+      "purpose": "Implement and verify the relevant default, pointer, keyboard, progress, outcome, and empty interaction states.",
+      "trigger": "Every interactive web control, form, asynchronous action, collection, and task outcome.",
+      "required_inputs": [
+        "interactive_elements",
+        "async_actions",
+        "validation_rules",
+        "empty_collections",
+        "input_methods"
+      ],
+      "simple_rules": [
+        "Implement DEFAULT, HOVER, FOCUS, ACTIVE, and DISABLED where applicable.",
+        "Implement LOADING, SUCCESS, ERROR, and EMPTY where applicable.",
+        "Make focus visible and preserve keyboard task completion.",
+        "Do not use color as the only state signal.",
+        "Keep disabled and loading controls understandable and non-destructive.",
+        "Verify real state transitions instead of accepting a static mockup.",
+        "A meaningful FAILED state names the plain-language cause, user consequence, and corrective action without exposing secrets."
+      ],
+      "required_output": [
+        "required_states",
+        "implemented_states",
+        "state_transitions",
+        "keyboard_evidence",
+        "missing_states"
+      ],
+      "hard_failures": [
+        "STATIC_MOCKUP_ONLY",
+        "FOCUS_STATE_MISSING",
+        "ASYNC_ERROR_STATE_MISSING",
+        "STATE_CONVEYED_BY_COLOR_ONLY",
+        "FAILED_WITHOUT_CAUSE_CONSEQUENCE_CORRECTION"
+      ],
+      "compatible_lenses": [
+        "LSET-HUMAN-WORK-DESIGN-CORE-001",
+        "SUPERLENSE-DESIGN-DIRECTION-CONTROL-001",
+        "DESIGN-STOP-AND-REVIEW-GATE-001",
+        "DESIGN-OVERENGINEERING-CONTROL-001",
+        "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+        "PROVIDER_ADAPTER",
+        "PROJECT_CONTEXT"
+      ]
+    },
+    {
+      "lens_id": "WEB-RESPONSIVE-WORKSPACE-001",
+      "version": "1.0.1",
+      "purpose": "Preserve completion of the primary task across narrow, standard, and wide browser workspaces.",
+      "trigger": "Every web layout or component whose available width, height, scaling, or input mode can change.",
+      "required_inputs": [
+        "primary_task",
+        "viewport_modes",
+        "always_visible",
+        "collapsible",
+        "movable",
+        "contextual",
+        "never_hidden"
+      ],
+      "simple_rules": [
+        "Define what remains visible, collapses, moves, and becomes contextual.",
+        "Declare what must never be hidden for task completion.",
+        "Use wide displays to improve work, not merely stretch line length.",
+        "Preserve the primary action and result on narrow displays.",
+        "Avoid overlaying essential controls or content at any target size.",
+        "Verify narrow and wide modes in a real browser with realistic content."
+      ],
+      "required_output": [
+        "responsive_modes",
+        "always_visible",
+        "collapses",
+        "moves",
+        "contextual",
+        "never_hidden",
+        "browser_evidence"
+      ],
+      "hard_failures": [
+        "PRIMARY_TASK_HIDDEN_ON_NARROW",
+        "WIDE_SPACE_WASTED_OR_STRETCHED",
+        "ESSENTIAL_CONTENT_OVERLAID",
+        "RESPONSIVE_BEHAVIOR_UNVERIFIED"
+      ],
+      "compatible_lenses": [
+        "LSET-HUMAN-WORK-DESIGN-CORE-001",
+        "SUPERLENSE-DESIGN-DIRECTION-CONTROL-001",
+        "DESIGN-STOP-AND-REVIEW-GATE-001",
+        "DESIGN-OVERENGINEERING-CONTROL-001",
+        "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+        "PROVIDER_ADAPTER",
+        "PROJECT_CONTEXT"
+      ]
+    },
+    {
+      "lens_id": "WEB-VISUAL-HIERARCHY-AND-DENSITY-001",
+      "version": "1.0.1",
+      "purpose": "Control hierarchy, grouping, density, spacing, contrast, and competing accents for the actual audience and task.",
+      "trigger": "During visual composition and after functional structure and information priority are known.",
+      "required_inputs": [
+        "audience",
+        "primary_task",
+        "information_priority",
+        "density_need",
+        "groups",
+        "accents",
+        "contrast_requirements"
+      ],
+      "simple_rules": [
+        "Use hierarchy and grouping to make the primary task and decisions legible.",
+        "Choose density for the audience and task instead of enforcing minimalism.",
+        "Accept dense professional interfaces when density supports fast precise work.",
+        "Use spacing consistently to express relationships, not decoration.",
+        "Limit competing accents and preserve sufficient contrast.",
+        "Apply visual refinement only after purpose, structure, content, and states work."
+      ],
+      "required_output": [
+        "hierarchy",
+        "grouping",
+        "density_decision",
+        "spacing_system",
+        "contrast",
+        "accent_budget"
+      ],
+      "hard_failures": [
+        "VISUAL_HIERARCHY_CONFLICTS_WITH_PRIORITY",
+        "UNJUSTIFIED_LOW_OR_HIGH_DENSITY",
+        "COMPETING_ACCENT_OVERLOAD",
+        "INSUFFICIENT_CONTRAST"
+      ],
+      "compatible_lenses": [
+        "LSET-HUMAN-WORK-DESIGN-CORE-001",
+        "SUPERLENSE-DESIGN-DIRECTION-CONTROL-001",
+        "DESIGN-STOP-AND-REVIEW-GATE-001",
+        "DESIGN-OVERENGINEERING-CONTROL-001",
+        "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+        "PROVIDER_ADAPTER",
+        "PROJECT_CONTEXT"
+      ]
+    },
+    {
+      "lens_id": "WEB-ERROR-FIRST-VISUAL-QA-001",
+      "version": "1.0.1",
+      "purpose": "Inspect the real implemented interface in severity order, fix hard failures, and preserve strengths before polish.",
+      "trigger": "After the interface runs in a browser and before any completion or acceptance claim.",
+      "required_inputs": [
+        "running_interface",
+        "browser_inspection",
+        "screenshots",
+        "real_content_cases",
+        "interaction_states",
+        "responsive_modes",
+        "acceptance_criteria"
+      ],
+      "simple_rules": [
+        "Review hard failures before primary-task and information-architecture blockers.",
+        "Then review interaction, responsive, accessibility, and visual failures.",
+        "Record strengths to preserve only after failures are identified.",
+        "Fix hard failures before optional visual polish.",
+        "Repeat browser inspection and screenshots after corrections.",
+        "Block completion when lens, browser, state, responsive, screenshot, or QA evidence is missing."
+      ],
+      "required_output": [
+        "hard_failures",
+        "primary_task_blockers",
+        "architecture_failures",
+        "interaction_failures",
+        "responsive_failures",
+        "accessibility_failures",
+        "visual_defects",
+        "preserve",
+        "repeat_validation"
+      ],
+      "hard_failures": [
+        "BROWSER_INSPECTION_MISSING",
+        "VISUAL_QA_EVIDENCE_MISSING",
+        "HARD_FAILURE_REMAINS",
+        "COMPLETION_WITHOUT_REPEAT_VALIDATION"
+      ],
+      "compatible_lenses": [
+        "LSET-HUMAN-WORK-DESIGN-CORE-001",
+        "SUPERLENSE-DESIGN-DIRECTION-CONTROL-001",
+        "DESIGN-STOP-AND-REVIEW-GATE-001",
+        "DESIGN-OVERENGINEERING-CONTROL-001",
+        "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+        "PROVIDER_ADAPTER",
+        "PROJECT_CONTEXT"
+      ]
+    }
+  ]
+}

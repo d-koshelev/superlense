@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/lens-failure-report.schema.json",
+  "type": "object",
+  "required": ["failure_id", "evidence_class", "evidence", "failure_class", "root_cause_hypothesis", "affected_module", "revision_proposal", "regression_risk", "next_test"],
+  "properties": {
+    "failure_class": {"enum": ["underfocus", "tunnel_vision", "context_omission", "context_pollution", "doctrine_conflict", "authority_inversion", "false_blocking", "unsafe_action", "tool_mismatch", "epistemic_collapse", "stale_state", "state_divergence", "report_inflation", "metric_gaming", "queue_theater", "handoff_loss", "provider_overfit", "test_leakage", "benchmark_overfit", "cost_explosion", "latency_explosion", "portability_failure"]}
+  }
+}
+

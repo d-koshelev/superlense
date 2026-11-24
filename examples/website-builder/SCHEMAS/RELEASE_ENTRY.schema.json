@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:superlense:website-builder:release-entry:1.0.0",
+  "title": "RELEASE_ENTRY",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "release_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "DRAFT",
+        "READY",
+        "DEPLOYMENT_AUTHORIZED",
+        "RELEASED",
+        "BLOCKED",
+        "ROLLED_BACK"
+      ]
+    },
+    "operator_acceptance_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "client_acceptance_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deployment_authorization_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "backup_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "rollback_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "release_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "release_id",
+    "project_id",
+    "target",
+    "state",
+    "operator_acceptance_id",
+    "client_acceptance_id",
+    "deployment_authorization_id",
+    "backup_evidence_ids",
+    "rollback_evidence_ids",
+    "release_evidence_ids"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "enum": [
+              "DEPLOYMENT_AUTHORIZED",
+              "RELEASED"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "operator_acceptance_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "deployment_authorization_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "backup_evidence_ids": {
+            "type": "array",
+            "minItems": 1
+          },
+          "rollback_evidence_ids": {
+            "type": "array",
+            "minItems": 1
+          }
+        },
+        "required": [
+          "operator_acceptance_id",
+          "deployment_authorization_id",
+          "backup_evidence_ids",
+          "rollback_evidence_ids"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "const": "RELEASED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "release_evidence_ids": {
+            "type": "array",
+            "minItems": 1
+          }
+        },
+        "required": [
+          "release_evidence_ids"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "lens_id",
+    "version",
+    "mounted_at",
+    "task_id",
+    "status"
+  ],
+  "properties": {
+    "lens_id": {
+      "const": "LENS-BOUNDARY-001"
+    },
+    "version": {
+      "const": "0.1.1"
+    },
+    "mounted_at": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "mounted",
+        "unmounted",
+        "stale",
+        "blocked"
+      ]
+    },
+    "state_refs": {
+      "type": "array"
+    }
+  }
+}

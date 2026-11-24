@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:superlense:website-builder:requirement-entry:1.0.0",
+  "title": "REQUIREMENT_ENTRY",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "requirement_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "statement": {
+      "type": "string"
+    },
+    "source_class": {
+      "enum": [
+        "OPERATOR_STATEMENT",
+        "AGENCY_DECISION",
+        "CLIENT_REQUIREMENT",
+        "CHATGPT_PROPOSAL",
+        "CODEX_REPORTED_FACT",
+        "DIRECT_LOCAL_EVIDENCE",
+        "ASSUMPTION",
+        "UNKNOWN",
+        "SUPERSEDED"
+      ]
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "ACCEPTED",
+        "REJECTED",
+        "SUPERSEDED",
+        "BLOCKED"
+      ]
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "requirement_id",
+    "project_id",
+    "statement",
+    "source_class",
+    "status",
+    "evidence_ids",
+    "acceptance_criteria",
+    "supersedes"
+  ]
+}

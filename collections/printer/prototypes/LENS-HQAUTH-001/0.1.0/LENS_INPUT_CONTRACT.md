@@ -1,0 +1,5 @@
+# Input contract
+
+Typed thread ledger with actor/source, sequence, acceptance evidence, and conflicts.
+
+Reject hidden, credential, inaccessible, wrong-base, or authority-conflicted inputs unless represented explicitly as unavailable/conflicted records.

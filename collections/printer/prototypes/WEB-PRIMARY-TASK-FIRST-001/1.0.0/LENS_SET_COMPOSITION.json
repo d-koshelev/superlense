@@ -1,0 +1,18 @@
+{
+  "set_id": "WEB-PRIMARY-TASK-FIRST-001-SOLO",
+  "version": "1.0.0",
+  "ordered_modules": [
+    "WEB-PRIMARY-TASK-FIRST-001"
+  ],
+  "layer": 3,
+  "priority": 310,
+  "context_budget": {
+    "rule_count": 6,
+    "policy": "compact_contract_only"
+  },
+  "authority_check": {
+    "result": "pass",
+    "operator_final": true,
+    "layer_0_and_1_override": false
+  }
+}

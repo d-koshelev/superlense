@@ -1,0 +1,17 @@
+{
+  "matrix_id": "CLRM-LORD-REPO-MIGRATION-001",
+  "order_id": "LORD-REPO-MIGRATION-001",
+  "component_or_task": "safe evidence-based repository migration planning",
+  "risk": "MEDIUM",
+  "requirements": [
+    {"behavior": "normalize task and unknown repository context", "effect": "Context Quality", "module": "LENS-INTAKE-001", "catalog_resolution": "candidate_inventory_only"},
+    {"behavior": "prevent source mutation and unsupported claims", "effect": "Boundary Compliance", "module": "LENS-BOUNDARY-001", "catalog_resolution": "candidate_inventory_only"},
+    {"behavior": "restore state after reset", "effect": "Continuity", "module": "LENS-STATE-001", "catalog_resolution": "candidate_inventory_only"},
+    {"behavior": "plan before admitting implementation work", "effect": "Goal Retention", "module": "LENS-QUEUE-001", "catalog_resolution": "candidate_inventory_only"},
+    {"behavior": "separate decisions from evidence", "effect": "Epistemic Discipline", "module": "LENS-DECISION-001", "catalog_resolution": "candidate_inventory_only"},
+    {"behavior": "return evidence and unknowns concisely", "effect": "Report Fidelity", "module": "LENS-REPORT-001", "catalog_resolution": "candidate_inventory_only"}
+  ],
+  "gate_state": "missing_qualified_modules",
+  "note": "Inventory names are not reusable catalog modules until qualification and release gates pass."
+}
+

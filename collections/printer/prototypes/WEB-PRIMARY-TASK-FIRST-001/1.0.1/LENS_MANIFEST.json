@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "lens_id": "WEB-PRIMARY-TASK-FIRST-001",
+  "name": "Web Primary Task First",
+  "version": "1.0.1",
+  "package_type": "LensModulePrototype",
+  "classification": {
+    "primary_effect_class": "Objective",
+    "secondary_effect_classes": [
+      "Aperture",
+      "Boundary"
+    ],
+    "scope": "conditional_default_web_interface",
+    "authority": "advisory_with_completion_gate",
+    "persistence": "task",
+    "layer": 3,
+    "priority": 310
+  },
+  "adjacent_concept_check": {
+    "result": "Lens_Module_candidate",
+    "not_merely": [
+      "documentation",
+      "checklist",
+      "theme",
+      "prompt",
+      "browser_tool",
+      "test_fixture"
+    ]
+  },
+  "qualification": {
+    "answers": {
+      "defined_problem_class": true,
+      "behavioral_transformation": true,
+      "removable": true,
+      "input_contract": true,
+      "output_or_state_contract": true,
+      "scope_authority_boundaries": true,
+      "baseline_measurable": true,
+      "version_and_provenance": true
+    },
+    "passes": true
+  },
+  "maturity": "prototype",
+  "evidence_level": "L1",
+  "conditional_default_loading": true,
+  "global_default_loading": false,
+  "external_validation": "unavailable",
+  "provenance": {
+    "source": "SUPERLENSE-COPILOT-WEB-INTERFACE-DESIGN-CORE-001@1.0.1",
+    "source_context": "operator_current_message",
+    "printer": "scripts/build-web-interface-design-core.mjs",
+    "doctrine": "LNS-FOUNDRY-DOCTRINE@1.0.0"
+  }
+}

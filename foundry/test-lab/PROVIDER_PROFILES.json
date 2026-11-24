@@ -1,0 +1,34 @@
+{
+  "updated_at": "2026-07-10T23:53:35Z",
+  "profiles": [
+    {
+      "provider_id": "codex-cli-local",
+      "adapter": "codex_exec",
+      "cli_version": "0.144.1",
+      "probe_status": "auth_blocked",
+      "independence": "independent_external",
+      "capabilities": ["ephemeral execution", "read-only sandbox", "structured output schema"],
+      "limitations": ["HTTP 401 Unauthorized from provider endpoint", "no test subject result captured"],
+      "last_probe": "2026-07-10T23:53:35Z"
+    },
+    {
+      "provider_id": "manual-fresh-thread",
+      "adapter": "manual_package",
+      "probe_status": "manual_only",
+      "independence": "manual_fresh_thread",
+      "capabilities": ["sealed subject package", "schema-bound return"],
+      "limitations": ["awaits future external agent return"],
+      "last_probe": "2026-07-10T23:53:35Z"
+    },
+    {
+      "provider_id": "current-copilot-self-test",
+      "adapter": "self_check",
+      "probe_status": "available",
+      "independence": "self_test_limited",
+      "capabilities": ["static contract and package-separation checks"],
+      "limitations": ["not independent", "cannot raise Lens evidence level"],
+      "last_probe": "2026-07-10T23:53:35Z"
+    }
+  ]
+}
+

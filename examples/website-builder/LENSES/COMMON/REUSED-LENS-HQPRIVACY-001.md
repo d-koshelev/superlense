@@ -1,0 +1,50 @@
+# LENS-HQPRIVACY-001
+
+Version: `0.1.0`
+Decision: `REUSE_COMPATIBLE`
+Source: `foundry-catalog://printer/prototypes/LENS-HQPRIVACY-001/0.1.0`
+Source SHA-256: `d385db807505ca3e306a91f438016e6d68326ab87522513683442eac0c4dd7c0`
+Source maturity: `prototype`
+Evidence: `L1`
+
+## Single responsibility
+
+Project one canonical state through explicit PRIVATE_FULL, CLEAN_PORTABLE, and PUBLIC_DEMO allow/deny/rewrite policies.
+
+## Activation
+
+Project coordination, state, evidence, or reporting requires this responsibility.
+
+## Input
+
+- current operator request
+- accepted project state
+- relevant direct evidence and limitations
+
+## Output
+
+- one bounded decision or state record
+- evidence level, limitations, and next gate
+
+## Runtime doctrine
+
+- Project one canonical state through explicit PRIVATE_FULL, CLEAN_PORTABLE, and PUBLIC_DEMO allow/deny/rewrite policies.
+- Do not promote proposals, reports, or missing evidence into accepted fact.
+- Preserve operator authority, unrelated projects, and valid existing behavior.
+
+## Non-goals and aberrations
+
+- privacy leakage
+- over-redaction
+- profile drift
+
+## Conflict and precedence
+
+the operator's authority and immutable safety/evidence rules win. Accepted
+project-specific decisions outrank domain/provider defaults. If evidence is
+missing or rules conflict, return `UNKNOWN` or `BLOCKED`; never invent access,
+completion, acceptance, or deployment.
+
+This file is the portable runtime contract used by the installer. Provenance
+is retained above, but no external source is required at runtime. The package
+does not silently replace or promote the source module.

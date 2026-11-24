@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/test-return-package.schema.json",
+  "type": "object",
+  "required": ["run_id", "variant", "provider_id", "final_response", "tools_used", "mutations", "errors", "token_usage", "latency_ms"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "variant": {"enum": ["RAW", "MINIMAL", "LENS", "ABLATION", "STRESS", "RESET", "PORTABILITY"]},
+    "provider_id": {"type": "string"},
+    "final_response": {"type": "string"},
+    "tools_used": {"type": "array"},
+    "mutations": {"type": "array"},
+    "errors": {"type": "array"},
+    "token_usage": {"oneOf": [{"type": "object"}, {"const": "unavailable"}]},
+    "latency_ms": {"oneOf": [{"type": "number", "minimum": 0}, {"const": "unavailable"}]},
+    "transcript_sha256": {"type": ["string", "null"]}
+  }
+}
+

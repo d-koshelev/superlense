@@ -1,0 +1,20 @@
+{
+  "set_id": "LENS-DECISION-001-SOLO",
+  "version": "0.1.0",
+  "ordered_modules": [
+    "LENS-DECISION-001"
+  ],
+  "context_budget": {
+    "estimated_tokens": "unavailable",
+    "policy": "measure_not_guess"
+  },
+  "authority_check": {
+    "result": "pass",
+    "operator_final": true
+  },
+  "compatibility_check": {
+    "result": "provisional",
+    "tested_pairs": [],
+    "unknown_pairs": []
+  }
+}

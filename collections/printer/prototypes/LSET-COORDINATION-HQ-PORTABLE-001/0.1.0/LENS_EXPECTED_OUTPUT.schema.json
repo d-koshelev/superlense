@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "status",
+    "project_count",
+    "decision_count",
+    "missing_artifact_count",
+    "integrity",
+    "gate",
+    "operator_overview"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "compiled_provisional",
+        "held",
+        "failed"
+      ]
+    },
+    "project_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "decision_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "missing_artifact_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "integrity": {
+      "type": "object"
+    },
+    "gate": {
+      "type": "string"
+    },
+    "operator_overview": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

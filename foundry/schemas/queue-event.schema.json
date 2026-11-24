@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/queue-event.schema.json",
+  "type": "object",
+  "required": ["event_id", "at", "event_type", "actor", "details"],
+  "properties": {
+    "event_id": {"pattern": "^LFND-EVT-[0-9]{6}$"},
+    "at": {"type": "string", "format": "date-time"},
+    "event_type": {"enum": ["queue_imported", "task_claimed", "task_started", "task_completed", "task_blocked", "task_reopened", "task_cancelled"]},
+    "task_id": {"type": ["string", "null"]},
+    "actor": {"type": "string"},
+    "lease_id": {"type": ["string", "null"]},
+    "details": {"type": "object"}
+  }
+}
+

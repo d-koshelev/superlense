@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/test-run.schema.json",
+  "type": "object",
+  "required": ["run_id", "order_id", "variant", "status", "evidence_class", "subject_package", "evaluator_package", "metrics", "provider"],
+  "properties": {
+    "variant": {"enum": ["RAW", "MINIMAL", "LENS", "ABLATION", "STRESS", "RESET", "PORTABILITY", "STATIC"]},
+    "status": {"enum": ["planned", "packaged", "waiting_external_agent", "running", "returned", "ingesting", "scored", "blocked", "invalid_return", "test_leak", "self_test_limited"]},
+    "evidence_class": {"enum": ["independent_external", "manual_fresh_thread_pending", "self_test_limited", "static_validation"]},
+    "metrics": {"type": "object"},
+    "provider": {"type": "object"}
+  }
+}
+

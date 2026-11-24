@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "critical",
+    "primary",
+    "supporting",
+    "contextual",
+    "preflight",
+    "maintenance",
+    "presentation_order"
+  ],
+  "properties": {
+    "critical": {},
+    "primary": {},
+    "supporting": {},
+    "contextual": {},
+    "preflight": {},
+    "maintenance": {},
+    "presentation_order": {}
+  },
+  "additionalProperties": true
+}

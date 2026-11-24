@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "human_work",
+    "copilot_work",
+    "execution_agent_work",
+    "decision_boundaries",
+    "evidence_required"
+  ],
+  "properties": {
+    "human_work": {},
+    "copilot_work": {},
+    "execution_agent_work": {},
+    "decision_boundaries": {},
+    "evidence_required": {}
+  },
+  "additionalProperties": true
+}

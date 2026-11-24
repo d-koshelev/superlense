@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/web-design-preflight.schema.json",
+  "title": "Web Interface Design Preflight",
+  "type": "object",
+  "required": [
+    "active_lenses",
+    "primary_user",
+    "primary_task",
+    "protected_work_field",
+    "information_priority",
+    "user_flow",
+    "real_content_cases",
+    "required_states",
+    "responsive_modes",
+    "acceptance_evidence"
+  ],
+  "properties": {
+    "active_lenses": {
+      "type": "array",
+      "minItems": 12,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "primary_user": {
+      "type": "string",
+      "minLength": 1
+    },
+    "primary_task": {
+      "type": "string",
+      "minLength": 1
+    },
+    "protected_work_field": {
+      "type": "string",
+      "minLength": 1
+    },
+    "information_priority": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "user_flow": {
+      "type": "object",
+      "required": [
+        "entry",
+        "user_goal",
+        "required_decisions",
+        "primary_action",
+        "system_feedback",
+        "result",
+        "next_destination"
+      ]
+    },
+    "real_content_cases": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_states": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "DEFAULT",
+          "HOVER",
+          "FOCUS",
+          "ACTIVE",
+          "DISABLED",
+          "LOADING",
+          "SUCCESS",
+          "ERROR",
+          "EMPTY"
+        ]
+      }
+    },
+    "responsive_modes": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "acceptance_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

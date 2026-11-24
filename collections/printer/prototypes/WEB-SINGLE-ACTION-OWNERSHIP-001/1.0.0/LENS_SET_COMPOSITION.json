@@ -1,0 +1,19 @@
+{
+  "set_id": "WEB-SINGLE-ACTION-OWNERSHIP-001-SOLO",
+  "version": "1.0.0",
+  "ordered_modules": [
+    "WEB-SINGLE-ACTION-OWNERSHIP-001"
+  ],
+  "layer": 3,
+  "priority": 315,
+  "context_budget": {
+    "rule_count": 7,
+    "policy": "compact_contract_only"
+  },
+  "authority_check": {
+    "result": "pass",
+    "operator_final": true,
+    "operator_override_supported": true,
+    "layer_0_and_1_override": false
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "set_id": "WEB-ERROR-FIRST-VISUAL-QA-001-SOLO",
+  "version": "1.0.0",
+  "ordered_modules": [
+    "WEB-ERROR-FIRST-VISUAL-QA-001"
+  ],
+  "layer": 3,
+  "priority": 380,
+  "context_budget": {
+    "rule_count": 6,
+    "policy": "compact_contract_only"
+  },
+  "authority_check": {
+    "result": "pass",
+    "operator_final": true,
+    "layer_0_and_1_override": false
+  }
+}

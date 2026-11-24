@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "lens_set_id": "LSET-COORDINATION-HQ-PORTABLE-001",
+  "name": "Portable Coordination Headquarters Lens Set",
+  "version": "0.1.0",
+  "package_type": "LensSetPrototype",
+  "maturity": "prototype",
+  "evidence_level": "L1",
+  "external_validation": "waiting_external_agent",
+  "modules_total": 15,
+  "reused_modules": 6,
+  "new_modules": 9,
+  "export_profiles": [
+    "PRIVATE_FULL",
+    "CLEAN_PORTABLE",
+    "PUBLIC_DEMO"
+  ],
+  "integrity_fields": [
+    "runtime_build_id",
+    "snapshot_version",
+    "canonical_state_hash",
+    "manifest_hash",
+    "zip_sha256"
+  ],
+  "canonical_replacement_permitted": false,
+  "provenance": {
+    "order": "orders/LORD-HQ-PORTABILITY-001.json",
+    "command_pack": "LNS-CORE-LFND-HQPORT-001",
+    "doctrine": "LNS-FOUNDRY-DOCTRINE@1.0.0",
+    "companion_inputs": "partial_input_unavailable"
+  }
+}

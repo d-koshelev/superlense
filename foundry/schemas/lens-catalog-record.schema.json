@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/lens-catalog-record.schema.json",
+  "title": "Lens Catalog Record",
+  "type": "object",
+  "required": ["lens_id", "name", "version", "classification", "qualification", "maturity", "evidence_level", "effect_hypothesis", "contracts", "provenance"],
+  "properties": {
+    "lens_id": {"pattern": "^LENS-[A-Z]+-[0-9]{3}$"},
+    "version": {"pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "maturity": {"enum": ["proposed", "prototype", "candidate", "validated", "catalog_released", "deprecated", "superseded"]},
+    "evidence_level": {"enum": ["L0", "L1", "L2", "L3", "L4", "L5"]},
+    "qualification": {"type": "object", "required": ["adjacent_concept_check", "answers", "passes"]},
+    "contracts": {"type": "object"},
+    "provenance": {"type": "object"}
+  },
+  "additionalProperties": true
+}
+

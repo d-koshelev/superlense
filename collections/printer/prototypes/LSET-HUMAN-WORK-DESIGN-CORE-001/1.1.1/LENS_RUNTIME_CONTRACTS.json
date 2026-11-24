@@ -1,0 +1,658 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "SUPERLENSE-COPILOT-HUMAN-WORK-DESIGN-CORE-001",
+  "package_version": "1.1.1",
+  "contract_shape": [
+    "lens_id",
+    "version",
+    "purpose",
+    "trigger",
+    "required_inputs",
+    "simple_rules",
+    "required_output",
+    "hard_failures",
+    "compatible_lenses"
+  ],
+  "contracts": [
+    {
+      "lens_id": "HUMAN-AGENT-MUTUAL-UNDERSTANDING-001",
+      "version": "1.1.1",
+      "purpose": "Align the literal request, intended outcome, premises, and permissible operator decision before work continues.",
+      "trigger": "Every material request; immediately when a premise or intent mismatch may affect the outcome.",
+      "required_inputs": [
+        "literal_request",
+        "intended_outcome",
+        "known_facts",
+        "human_assumptions",
+        "agent_assumptions",
+        "unknowns"
+      ],
+      "simple_rules": [
+        "Distinguish the literal request from the likely real objective.",
+        "Check key premises, causal links, and internal consistency.",
+        "Do not automatically agree with a flawed idea.",
+        "Report a material error before continuing the work.",
+        "Distinguish fact, assumption, preference, and operator decision.",
+        "Use possible-mismatch language when confidence is insufficient.",
+        "After one clear warning, preserve a permissible operator override.",
+        "Do not interrupt over immaterial inaccuracies."
+      ],
+      "required_output": [
+        "alignment_state",
+        "material_problem_or_none",
+        "assumptions",
+        "unknowns",
+        "operator_override_or_none"
+      ],
+      "hard_failures": [
+        "BLIND_AGREEMENT",
+        "SILENT_LOGIC_CONFLICT",
+        "FALSE_CERTAINTY",
+        "NITPICKING_INSTEAD_OF_HELPING",
+        "AGENT_REWRITES_USER_INTENT",
+        "WARNING_REPEATED_AFTER_CONSCIOUS_OVERRIDE"
+      ],
+      "compatible_lenses": [
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT",
+        "LENS-INTAKE-001",
+        "LENS-DECISION-001",
+        "LENS-BOUNDARY-001",
+        "LENS-QUEUE-001",
+        "LENS-REPORT-001"
+      ]
+    },
+    {
+      "lens_id": "DESIGN-ERROR-FIRST-CRITIQUE-001",
+      "version": "1.1.1",
+      "purpose": "Find and correct hard failures before polishing or amplifying strengths.",
+      "trigger": "Review, critique, redesign, debugging, validation, and acceptance work.",
+      "required_inputs": [
+        "objective",
+        "candidate_result",
+        "acceptance_criteria",
+        "known_working_elements",
+        "regression_boundary"
+      ],
+      "simple_rules": [
+        "Determine the objective before judging the result.",
+        "Find hard failures and blockers to primary work first.",
+        "Correct problems in severity order.",
+        "Do not confuse taste preferences with errors.",
+        "Do not destroy a working element while fixing a neighbor.",
+        "Check each correction for regression.",
+        "Record strengths as PRESERVE before changing them.",
+        "Use AMPLIFY only after the foundation is stable."
+      ],
+      "required_output": [
+        "hard_failures",
+        "severity_order",
+        "preserve",
+        "corrections",
+        "regression_checks",
+        "amplify"
+      ],
+      "hard_failures": [
+        "PRAISE_BEFORE_DIAGNOSIS",
+        "STYLE_BEFORE_FUNCTION",
+        "POLISHING_BROKEN_STRUCTURE",
+        "FIX_DESTROYS_WORKING_FEATURE",
+        "COSMETIC_CHANGE_PRESENTED_AS_SOLUTION"
+      ],
+      "compatible_lenses": [
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT",
+        "LENS-INTAKE-001",
+        "LENS-DECISION-001",
+        "LENS-BOUNDARY-001",
+        "LENS-QUEUE-001",
+        "LENS-REPORT-001"
+      ]
+    },
+    {
+      "lens_id": "HUMAN-PRIMARY-WORK-001",
+      "version": "1.1.1",
+      "purpose": "Identify the person's primary activity and protect it from tools, service processes, and secondary information.",
+      "trigger": "Workspace, interface, process, response, dashboard, and tool-layout design.",
+      "required_inputs": [
+        "human_role",
+        "primary_activity",
+        "supporting_activities",
+        "frequency",
+        "current_surface"
+      ],
+      "simple_rules": [
+        "Determine what the person actually does most of the time.",
+        "Give the main work surface to that activity.",
+        "Keep frequent support nearby but never over the primary work.",
+        "Show situational functions only when context makes them relevant.",
+        "Move preparation and maintenance outside the primary flow.",
+        "Do not let system status or tooling dominate user content."
+      ],
+      "required_output": [
+        "primary_work",
+        "forward_field",
+        "immediate_reach",
+        "contextual_surface",
+        "preflight",
+        "maintenance"
+      ],
+      "hard_failures": [
+        "PRIMARY_TASK_COMPRESSED_BY_TOOLING",
+        "DASHBOARD_INSTEAD_OF_WORKSPACE",
+        "PERMANENT_SECONDARY_PANELS",
+        "CONFIGURATION_INSIDE_PRIMARY_FLOW",
+        "SYSTEM_STATUS_DOMINATES_USER_CONTENT"
+      ],
+      "compatible_lenses": [
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT",
+        "LENS-INTAKE-001",
+        "LENS-DECISION-001",
+        "LENS-BOUNDARY-001",
+        "LENS-QUEUE-001",
+        "LENS-REPORT-001"
+      ]
+    },
+    {
+      "lens_id": "HUMAN-AUDIENCE-AND-CONTEXT-001",
+      "version": "1.1.1",
+      "purpose": "Adapt the work to the actual audience's role, expertise, task, and operating conditions.",
+      "trigger": "Any response, flow, interface, report, or handoff with a human audience.",
+      "required_inputs": [
+        "audience_role",
+        "expertise",
+        "task",
+        "terminology",
+        "working_conditions",
+        "error_cost"
+      ],
+      "simple_rules": [
+        "Never design for an abstract generic user.",
+        "Account for role, expertise, terminology, and working conditions.",
+        "Account for action frequency, urgency, and cost of error.",
+        "Do not confuse information density with disorder.",
+        "Do not simplify expert work until precision is lost.",
+        "Do not overload a novice with details not yet needed."
+      ],
+      "required_output": [
+        "audience_profile",
+        "context_constraints",
+        "density_level",
+        "terminology_level",
+        "guidance_level"
+      ],
+      "hard_failures": [
+        "GENERIC_USER_ASSUMPTION",
+        "EXPERT_PRECISION_LOST",
+        "NOVICE_OVERLOAD",
+        "CONTEXT_CONDITIONS_IGNORED"
+      ],
+      "compatible_lenses": [
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT",
+        "LENS-INTAKE-001",
+        "LENS-DECISION-001",
+        "LENS-BOUNDARY-001",
+        "LENS-QUEUE-001",
+        "LENS-REPORT-001"
+      ]
+    },
+    {
+      "lens_id": "DESIGN-STOP-AND-REVIEW-GATE-001",
+      "version": "1.0.0",
+      "purpose": "Stop meaningful design work when the proposed direction cannot be clearly connected to helping a specific user perform a specific primary task.",
+      "trigger": "Before any meaningful design addition, change, or refinement; emit STOP_AND_REVIEW when primary work is harmed, concrete user benefit is absent, structure is unclear, or a more serious regression appears.",
+      "required_inputs": [
+        "user",
+        "primary_work",
+        "concrete_obstacle_or_need",
+        "proposed_change",
+        "preserve",
+        "new_cost_or_regression"
+      ],
+      "simple_rules": [
+        "Identify the user, primary work, concrete need, benefit, preserve set, and new cost.",
+        "If the benefit cannot be explained in one clear sentence, trigger STOP_AND_REVIEW.",
+        "Trigger when primary work becomes harder, smaller, slower, less visible, or displaced by rare or maintenance functions.",
+        "Trigger when style precedes purpose or added panels, controls, modes, or explanations compensate for unclear logic.",
+        "Trigger on serious regression, user workaround, purpose disagreement, or static-only success that fails real content or workflow.",
+        "Classify each concern as verified problem, probable risk, assumption, operator preference, or deliberate tradeoff.",
+        "Correct the smallest structural failure, verify primary work and regressions, preserve strengths, then allow polish.",
+        "Allow one explicit permissible operator override and record its known consequences without repeated argument."
+      ],
+      "required_output": [
+        "design_direction_status",
+        "primary_work",
+        "detected_problem",
+        "why_current_direction_is_unsafe",
+        "preserve",
+        "required_correction",
+        "deferred",
+        "operator_override_or_none"
+      ],
+      "hard_failures": [
+        "DIRECTION_WITHOUT_PRIMARY_WORK_BENEFIT",
+        "PRIMARY_WORK_DEGRADED_BY_DESIGN",
+        "STYLE_BEFORE_PURPOSE_AND_STRUCTURE",
+        "ADDITIVE_COMPENSATION_FOR_UNCLEAR_LOGIC",
+        "FIX_CREATES_MORE_SERIOUS_REGRESSION",
+        "STATIC_MOCKUP_ONLY",
+        "SILENT_HARMFUL_DESIGN_ASSUMPTION",
+        "REPEATED_ARGUMENT_AFTER_OPERATOR_OVERRIDE"
+      ],
+      "compatible_lenses": [
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT",
+        "LENS-INTAKE-001",
+        "LENS-DECISION-001",
+        "LENS-BOUNDARY-001",
+        "LENS-QUEUE-001",
+        "LENS-REPORT-001"
+      ]
+    },
+    {
+      "lens_id": "DESIGN-OVERENGINEERING-CONTROL-001",
+      "version": "1.0.0",
+      "purpose": "Classify whether solution complexity is necessary, justified, experimental, premature, or overengineered relative to the real problem.",
+      "trigger": "Before accepting a meaningful subsystem, abstraction, configuration surface, architecture layer, or expensive extension.",
+      "required_inputs": [
+        "real_user_problem",
+        "current_evidence",
+        "simplest_sufficient_solution",
+        "implementation_cost",
+        "maintenance_cost",
+        "cognitive_cost",
+        "future_value",
+        "reversibility"
+      ],
+      "simple_rules": [
+        "Anchor complexity to a real user problem and current evidence.",
+        "Compare the proposal with the simplest sufficient solution.",
+        "Account for implementation, maintenance, cognitive, and decision cost.",
+        "Classify the proposal as NECESSARY, JUSTIFIED_EXTENSION, EXPERIMENTAL, PREMATURE, or OVERENGINEERED.",
+        "Warn when hypothetical futures, configuration, abstraction layers, or technical sophistication replace present user benefit.",
+        "Do not reject complexity required by safety, risk, scale, or distinct supported audiences.",
+        "Prefer the smallest reversible test and preserve one explicit permissible operator override."
+      ],
+      "required_output": [
+        "complexity_status",
+        "real_user_problem",
+        "current_evidence",
+        "simplest_sufficient_solution",
+        "costs",
+        "future_value",
+        "reversibility",
+        "warning_or_none",
+        "operator_override_or_none"
+      ],
+      "hard_failures": [
+        "HYPOTHETICAL_FUTURE_DOMINATES_CURRENT_NEED",
+        "SUBSYSTEM_REPLACES_SMALL_CORRECTION",
+        "COMPLEXITY_WITHOUT_USER_BENEFIT",
+        "CONFIGURATION_INSTEAD_OF_GOOD_DEFAULT",
+        "ABSTRACTION_LAYERS_FOR_ONE_USE_CASE",
+        "MAINTENANCE_COST_EXCEEDS_PROBABLE_VALUE",
+        "SOPHISTICATION_AS_PRIMARY_JUSTIFICATION",
+        "JUSTIFIED_COMPLEXITY_FALSELY_REJECTED"
+      ],
+      "compatible_lenses": [
+        "LSET-HUMAN-WORK-DESIGN-CORE-001",
+        "HUMAN-PRIMARY-WORK-001",
+        "HUMAN-AUDIENCE-AND-CONTEXT-001",
+        "HUMAN-AGENT-MUTUAL-UNDERSTANDING-001",
+        "DESIGN-ERROR-FIRST-CRITIQUE-001",
+        "DESIGN-OPERATOR-AGENCY-001",
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT"
+      ]
+    },
+    {
+      "lens_id": "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+      "version": "1.0.0",
+      "purpose": "Permit intentional A/B/C alternatives while preventing duplicate ownership, conflicting sources of truth, and permanent experiments.",
+      "trigger": "Whenever two or more design candidates, variants, branches, modes, or directions coexist.",
+      "required_inputs": [
+        "candidates",
+        "shared_invariants",
+        "source_of_truth",
+        "ownership",
+        "evaluation_criteria",
+        "selection_or_coexistence_condition",
+        "merge_or_retirement_condition"
+      ],
+      "simple_rules": [
+        "Allow parallel candidates only when their purpose, user, primary task, and meaningful difference are explicit.",
+        "Require shared invariants, advantages, costs, risks, status, and evaluation criteria for every candidate.",
+        "Keep one declared source of truth and do not require manual fix copying.",
+        "Keep ownership, experimental status, selection or coexistence, and merge or retirement conditions visible.",
+        "Explain candidate consequences in terms the operator can compare.",
+        "Trigger UNCONTROLLED_PARALLEL_ARCHITECTURE for duplication, conflicting truth, unclear status, silent permanence, or missing exit conditions.",
+        "Preserve legitimate alternatives for different audiences, workflows, risk profiles, or creative directions.",
+        "Allow one explicit permissible operator override and record its known consequences."
+      ],
+      "required_output": [
+        "parallel_architecture_status",
+        "candidate_records",
+        "shared_invariants",
+        "source_of_truth",
+        "evaluation_criteria",
+        "selection_or_coexistence_condition",
+        "merge_or_retirement_condition",
+        "operator_override_or_none"
+      ],
+      "hard_failures": [
+        "UNCONTROLLED_PARALLEL_ARCHITECTURE",
+        "DUPLICATE_CANDIDATES_WITHOUT_MEANINGFUL_DIFFERENCE",
+        "CONFLICTING_SOURCES_OF_TRUTH",
+        "MANUAL_FIX_COPYING_REQUIRED",
+        "CANDIDATE_OWNER_OR_STATUS_UNCLEAR",
+        "EXPERIMENT_SILENTLY_PERMANENT",
+        "CHOICES_WITHOUT_UNDERSTANDABLE_CONSEQUENCES",
+        "MISSING_SELECTION_COEXISTENCE_MERGE_OR_RETIREMENT_CONDITION"
+      ],
+      "compatible_lenses": [
+        "LSET-HUMAN-WORK-DESIGN-CORE-001",
+        "HUMAN-PRIMARY-WORK-001",
+        "HUMAN-AUDIENCE-AND-CONTEXT-001",
+        "HUMAN-AGENT-MUTUAL-UNDERSTANDING-001",
+        "DESIGN-ERROR-FIRST-CRITIQUE-001",
+        "DESIGN-OPERATOR-AGENCY-001",
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT"
+      ]
+    },
+    {
+      "lens_id": "DESIGN-INFORMATION-PRIORITY-001",
+      "version": "1.1.1",
+      "purpose": "Present information according to its importance, frequency, and moment of use.",
+      "trigger": "Responses, reports, dashboards, inspectors, forms, and decision surfaces.",
+      "required_inputs": [
+        "information_items",
+        "decision_context",
+        "frequency",
+        "urgency",
+        "error_cost"
+      ],
+      "simple_rules": [
+        "Do not place all information at the same level.",
+        "Show critical information immediately and rarely.",
+        "Keep primary information continuously available.",
+        "Keep supporting information nearby without making it dominant.",
+        "Reveal contextual information when the situation requires it.",
+        "Place technical details and logs below the result."
+      ],
+      "required_output": [
+        "critical",
+        "primary",
+        "supporting",
+        "contextual",
+        "preflight",
+        "maintenance",
+        "presentation_order"
+      ],
+      "hard_failures": [
+        "FLAT_PRIORITY",
+        "CRITICAL_INFORMATION_HIDDEN",
+        "PRIMARY_INFORMATION_DISPLACED",
+        "TECHNICAL_LOG_BEFORE_RESULT"
+      ],
+      "compatible_lenses": [
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT",
+        "LENS-INTAKE-001",
+        "LENS-DECISION-001",
+        "LENS-BOUNDARY-001",
+        "LENS-QUEUE-001",
+        "LENS-REPORT-001"
+      ]
+    },
+    {
+      "lens_id": "HUMAN-ATTENTION-BUDGET-001",
+      "version": "1.1.1",
+      "purpose": "Protect limited human attention and working memory from competing demands.",
+      "trigger": "Any work with multiple surfaces, alerts, decisions, details, or context switches.",
+      "required_inputs": [
+        "primary_focus",
+        "competing_demands",
+        "current_decision",
+        "working_memory_load",
+        "draft_or_context"
+      ],
+      "simple_rules": [
+        "Do not create several equal centers of attention.",
+        "Reduce unnecessary context switching.",
+        "Do not notify the user about normal state without a reason.",
+        "Show detail only when it helps the current decision.",
+        "Group noise into compact statistics or a separate report.",
+        "Protect the user's draft, context, and train of thought."
+      ],
+      "required_output": [
+        "primary_focus",
+        "deferred_noise",
+        "current_decision_detail",
+        "context_protection"
+      ],
+      "hard_failures": [
+        "MULTIPLE_EQUAL_FOCI",
+        "UNNECESSARY_CONTEXT_SWITCH",
+        "NORMAL_STATE_NOTIFICATION_SPAM",
+        "DETAIL_WITHOUT_DECISION_VALUE",
+        "DRAFT_OR_CONTEXT_LOSS"
+      ],
+      "compatible_lenses": [
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT",
+        "LENS-INTAKE-001",
+        "LENS-DECISION-001",
+        "LENS-BOUNDARY-001",
+        "LENS-QUEUE-001",
+        "LENS-REPORT-001"
+      ]
+    },
+    {
+      "lens_id": "HUMAN-INTERRUPTION-COST-001",
+      "version": "1.1.1",
+      "purpose": "Protect work flow from interruptions that do not justify their recovery cost.",
+      "trigger": "Questions, confirmations, alerts, format changes, and workflow pauses.",
+      "required_inputs": [
+        "current_work_mode",
+        "prior_answers",
+        "proposed_interruption",
+        "risk_level",
+        "recovery_cost"
+      ],
+      "simple_rules": [
+        "Do not repeat a question already answered.",
+        "Do not request confirmation for an obvious safe step.",
+        "Do not interrupt creative work with technical detail.",
+        "Do not change format or terminology unexpectedly.",
+        "Do not force the user to reconstruct lost context.",
+        "Interrupt immediately only for critical error, data loss, danger, or an almost certainly wrong outcome."
+      ],
+      "required_output": [
+        "interrupt_or_continue",
+        "justification",
+        "batched_questions",
+        "context_restore"
+      ],
+      "hard_failures": [
+        "REPEATED_QUESTION",
+        "USELESS_CONFIRMATION",
+        "NORMAL_STATE_NOTIFICATION_SPAM",
+        "DRAFT_OR_CONTEXT_LOSS",
+        "TECHNICAL_NOISE_DURING_FOCUS_WORK"
+      ],
+      "compatible_lenses": [
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT",
+        "LENS-INTAKE-001",
+        "LENS-DECISION-001",
+        "LENS-BOUNDARY-001",
+        "LENS-QUEUE-001",
+        "LENS-REPORT-001"
+      ]
+    },
+    {
+      "lens_id": "HUMAN-ENERGY-ALLOCATION-001",
+      "version": "1.1.1",
+      "purpose": "Allocate attention, time, decision energy, and compute resources productively.",
+      "trigger": "Planning, delegation, review scheduling, automation, and compute selection.",
+      "required_inputs": [
+        "work_items",
+        "human_resources",
+        "decision_consequence",
+        "review_readiness",
+        "compute_options"
+      ],
+      "simple_rules": [
+        "Do not spend human concentration on mechanical operations.",
+        "Batch repeated questions and decisions.",
+        "Do not request review before a verifiable result exists.",
+        "Do not spend expensive compute where a simpler method is sufficient.",
+        "Do not transfer consequential decisions to an agent invisibly.",
+        "Preserve the ability to stop or correct automation."
+      ],
+      "required_output": [
+        "focus_work",
+        "decision_work",
+        "routine_work",
+        "review_work",
+        "maintenance_work",
+        "compute_choice"
+      ],
+      "hard_failures": [
+        "HUMAN_DOES_MECHANICAL_WORK",
+        "PREMATURE_REVIEW_REQUEST",
+        "EXPENSIVE_COMPUTE_WITHOUT_NEED",
+        "CONSEQUENTIAL_DECISION_HIDDEN",
+        "AUTOMATION_WITHOUT_STOP"
+      ],
+      "compatible_lenses": [
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT",
+        "LENS-INTAKE-001",
+        "LENS-DECISION-001",
+        "LENS-BOUNDARY-001",
+        "LENS-QUEUE-001",
+        "LENS-REPORT-001"
+      ]
+    },
+    {
+      "lens_id": "HUMAN-RESOURCE-ROUTER-001",
+      "version": "1.1.1",
+      "purpose": "Assign work to the human, Copilot, or execution agent without transferring human decisions to machines.",
+      "trigger": "Task decomposition, delegation, execution planning, and handoff.",
+      "required_inputs": [
+        "goal",
+        "work_items",
+        "risk",
+        "taste_or_meaning_decisions",
+        "mechanical_operations",
+        "evidence_contract"
+      ],
+      "simple_rules": [
+        "Route goals, priorities, meaning, high-risk choices, taste, and final acceptance to the human.",
+        "Route intent, logic, context, decomposition, options, and synthesis to Copilot.",
+        "Route mechanical operations, code, checks, transforms, collection, and repetition to execution agents.",
+        "Do not ask the human to perform available machine work.",
+        "Do not let a machine appropriate a consequential human decision.",
+        "Require execution agents to return technical evidence."
+      ],
+      "required_output": [
+        "human_work",
+        "copilot_work",
+        "execution_agent_work",
+        "decision_boundaries",
+        "evidence_required"
+      ],
+      "hard_failures": [
+        "MACHINE_APPROPRIATES_DECISION",
+        "HUMAN_ASSIGNED_MECHANICAL_WORK",
+        "UNVERIFIABLE_EXECUTOR_RETURN",
+        "ROLE_BOUNDARY_HIDDEN"
+      ],
+      "compatible_lenses": [
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT",
+        "LENS-INTAKE-001",
+        "LENS-DECISION-001",
+        "LENS-BOUNDARY-001",
+        "LENS-QUEUE-001",
+        "LENS-REPORT-001"
+      ]
+    },
+    {
+      "lens_id": "DESIGN-OPERATOR-AGENCY-001",
+      "version": "1.1.1",
+      "purpose": "Keep the user as the primary actor with visible consequences, boundaries, and intervention controls.",
+      "trigger": "Automation, commands, decisions, generated actions, control panels, and unexplained results.",
+      "required_inputs": [
+        "object_of_control",
+        "proposed_action",
+        "consequences",
+        "automation_boundary",
+        "intervention_controls"
+      ],
+      "simple_rules": [
+        "Make the current action understandable.",
+        "Show the object of control and command consequences.",
+        "Give automation clear boundaries.",
+        "Keep critical decisions visible.",
+        "Provide a way to intervene, stop, or change course.",
+        "Distinguish agent proposals, automated actions, and user decisions."
+      ],
+      "required_output": [
+        "object_of_control",
+        "action_state",
+        "consequences",
+        "automation_boundary",
+        "override_controls",
+        "decision_owner"
+      ],
+      "hard_failures": [
+        "USER_AS_PASSENGER",
+        "SYSTEM_AS_PROTAGONIST",
+        "AUTOMATION_WITHOUT_OVERRIDE",
+        "INVISIBLE_DECISION",
+        "FAKE_CONTROL",
+        "UNEXPLAINED_RESULT"
+      ],
+      "compatible_lenses": [
+        "LAYER_0_GUARDRAILS",
+        "PROVIDER_ADAPTER",
+        "DOMAIN_SPECIALIZATION",
+        "PROJECT_CONTEXT",
+        "LENS-INTAKE-001",
+        "LENS-DECISION-001",
+        "LENS-BOUNDARY-001",
+        "LENS-QUEUE-001",
+        "LENS-REPORT-001"
+      ]
+    }
+  ]
+}

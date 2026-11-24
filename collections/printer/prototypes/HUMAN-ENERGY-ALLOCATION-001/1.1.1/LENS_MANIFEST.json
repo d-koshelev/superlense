@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "lens_id": "HUMAN-ENERGY-ALLOCATION-001",
+  "name": "Human Energy Allocation",
+  "version": "1.1.1",
+  "package_type": "LensModulePrototype",
+  "classification": {
+    "primary_effect_class": "Planning",
+    "secondary_effect_classes": [
+      "Aperture",
+      "Objective"
+    ],
+    "scope": "global_default_foundational",
+    "authority": "advisory_with_explicit_operator_authority",
+    "persistence": "session",
+    "layer": 1,
+    "priority": 80
+  },
+  "adjacent_concept_check": {
+    "result": "Lens_Module_candidate",
+    "not_merely": [
+      "doctrine",
+      "prompt",
+      "persona",
+      "skill",
+      "tool",
+      "queue",
+      "memory_store",
+      "report_form",
+      "department",
+      "agent"
+    ]
+  },
+  "qualification": {
+    "answers": {
+      "defined_problem_class": true,
+      "behavioral_transformation": true,
+      "removable": true,
+      "input_contract": true,
+      "output_or_state_contract": true,
+      "scope_authority_boundaries": true,
+      "baseline_measurable": true,
+      "version_and_provenance": true
+    },
+    "passes": true
+  },
+  "maturity": "prototype",
+  "evidence_level": "L1",
+  "internal_default_loading": true,
+  "external_validation": "unavailable",
+  "provenance": {
+    "source": "SUPERLENSE-COPILOT-HUMAN-WORK-DESIGN-CORE-001@1.1.1",
+    "source_sha256": "bcd52467305d37597bd774641b32484e37e300b2eb10337d001e1e67072b9fc9",
+    "printer": "scripts/build-human-work-design-core.mjs",
+    "doctrine": "LNS-FOUNDRY-DOCTRINE@1.0.0"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "order_id": "LORD-REPO-MIGRATION-001",
+  "parsed": true,
+  "task_family": "unfamiliar_repository_migration_planning",
+  "effect_target": {
+    "desired": {
+      "Focus": "improve",
+      "Goal Retention": "improve",
+      "Epistemic Discipline": "strongly_improve",
+      "Context Quality": "strongly_improve",
+      "Action Precision": "improve",
+      "Boundary Compliance": "must_not_regress",
+      "Verification Strength": "strongly_improve",
+      "Continuity": "maintain",
+      "Coordination": "maintain",
+      "Operator Burden": "reduce",
+      "Cost": "bounded_increase_allowed",
+      "Latency": "bounded_increase_allowed",
+      "Stability": "improve",
+      "Portability": "maintain"
+    },
+    "baselines": [
+      "RAW",
+      "MINIMAL"
+    ],
+    "measured": "unavailable"
+  },
+  "catalog_resolution": {
+    "reusable_released_modules": [],
+    "inventory_candidates": [
+      "LENS-INTAKE-001",
+      "LENS-BOUNDARY-001",
+      "LENS-STATE-001",
+      "LENS-QUEUE-001",
+      "LENS-DECISION-001",
+      "LENS-REPORT-001"
+    ],
+    "missing_qualified_modules": [
+      "LENS-INTAKE-001",
+      "LENS-BOUNDARY-001",
+      "LENS-STATE-001",
+      "LENS-QUEUE-001",
+      "LENS-DECISION-001",
+      "LENS-REPORT-001"
+    ]
+  },
+  "composition": {
+    "set_id": "LENS-SET-REPO-MIGRATION-001",
+    "version": "0.1.0",
+    "ordered_modules": [
+      "LENS-INTAKE-001",
+      "LENS-BOUNDARY-001",
+      "LENS-STATE-001",
+      "LENS-QUEUE-001",
+      "LENS-DECISION-001",
+      "LENS-REPORT-001"
+    ],
+    "context_budget": {
+      "measured_tokens": "unavailable",
+      "gate": "measure_before_release"
+    },
+    "authority_check": {
+      "result": "pass",
+      "operator_final": true,
+      "source_mutation": "forbidden"
+    },
+    "compatibility_check": {
+      "result": "provisional",
+      "unknown_pairs": "all_unexternally_tested_pairs"
+    }
+  },
+  "missing_module_orders": [
+    {
+      "development_order_id": "LDEV-LENS-INTAKE-001",
+      "lens_id": "LENS-INTAKE-001",
+      "status": "planned",
+      "reason": "no catalog_released module satisfies requirement"
+    },
+    {
+      "development_order_id": "LDEV-LENS-BOUNDARY-001",
+      "lens_id": "LENS-BOUNDARY-001",
+      "status": "planned",
+      "reason": "no catalog_released module satisfies requirement"
+    },
+    {
+      "development_order_id": "LDEV-LENS-STATE-001",
+      "lens_id": "LENS-STATE-001",
+      "status": "planned",
+      "reason": "no catalog_released module satisfies requirement"
+    },
+    {
+      "development_order_id": "LDEV-LENS-QUEUE-001",
+      "lens_id": "LENS-QUEUE-001",
+      "status": "planned",
+      "reason": "no catalog_released module satisfies requirement"
+    },
+    {
+      "development_order_id": "LDEV-LENS-DECISION-001",
+      "lens_id": "LENS-DECISION-001",
+      "status": "planned",
+      "reason": "no catalog_released module satisfies requirement"
+    },
+    {
+      "development_order_id": "LDEV-LENS-REPORT-001",
+      "lens_id": "LENS-REPORT-001",
+      "status": "planned",
+      "reason": "no catalog_released module satisfies requirement"
+    }
+  ],
+  "release_eligibility": false,
+  "compiled_at": "2026-07-10T23:49:53.868Z"
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "lens_id": "DESIGN-CONTROLLED-PARALLEL-DIRECTIONS-001",
+  "name": "Design Controlled Parallel Directions",
+  "version": "1.0.0",
+  "package_type": "LensModulePrototype",
+  "classification": {
+    "primary_effect_class": "Boundary",
+    "secondary_effect_classes": [
+      "Prism",
+      "Planning"
+    ],
+    "scope": "global_default_foundational",
+    "authority": "advisory_with_explicit_operator_authority",
+    "persistence": "session",
+    "layer": 1,
+    "priority": 47
+  },
+  "adjacent_concept_check": {
+    "result": "Lens_Module_candidate",
+    "not_merely": [
+      "doctrine",
+      "prompt",
+      "persona",
+      "skill",
+      "tool",
+      "queue",
+      "memory_store",
+      "report_form",
+      "department",
+      "agent"
+    ]
+  },
+  "qualification": {
+    "answers": {
+      "defined_problem_class": true,
+      "behavioral_transformation": true,
+      "removable": true,
+      "input_contract": true,
+      "output_or_state_contract": true,
+      "scope_authority_boundaries": true,
+      "baseline_measurable": true,
+      "version_and_provenance": true
+    },
+    "passes": true
+  },
+  "maturity": "prototype",
+  "evidence_level": "L1",
+  "internal_default_loading": true,
+  "external_validation": "unavailable",
+  "provenance": {
+    "source": "SUPERLENSE-DESIGN-DIRECTION-CONTROL-001@1.0.0",
+    "source_context": "operator_current_message",
+    "printer": "scripts/extend-design-direction-control.mjs",
+    "doctrine": "LNS-FOUNDRY-DOCTRINE@1.0.0"
+  }
+}

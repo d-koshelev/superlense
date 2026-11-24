@@ -1,0 +1,99 @@
+{
+  "set_id": "LSET-WEB-INTERFACE-DESIGN-CORE-001",
+  "lens_set_id": "LSET-WEB-INTERFACE-DESIGN-CORE-001",
+  "package_id": "SUPERLENSE-COPILOT-WEB-INTERFACE-DESIGN-CORE-001",
+  "version": "1.1.0",
+  "layer": 3,
+  "ordered_modules": [
+    "WEB-PRIMARY-TASK-FIRST-001",
+    "WEB-SINGLE-ACTION-OWNERSHIP-001",
+    "WEB-INFORMATION-PRIORITY-001",
+    "WEB-USER-FLOW-BEFORE-SCREEN-001",
+    "WEB-STATE-LANGUAGE-ACTION-CONSISTENCY-001",
+    "WEB-NAVIGATION-TAXONOMY-AND-REACHABILITY-001",
+    "WEB-PRIMARY-IDENTITY-VISIBILITY-001",
+    "WEB-REAL-CONTENT-FIRST-001",
+    "WEB-INTERACTION-STATES-001",
+    "WEB-RESPONSIVE-WORKSPACE-001",
+    "WEB-VISUAL-HIERARCHY-AND-DENSITY-001",
+    "WEB-ERROR-FIRST-VISUAL-QA-001"
+  ],
+  "ordered_module_versions": [
+    {
+      "lens_id": "WEB-PRIMARY-TASK-FIRST-001",
+      "version": "1.0.1"
+    },
+    {
+      "lens_id": "WEB-SINGLE-ACTION-OWNERSHIP-001",
+      "version": "1.0.0"
+    },
+    {
+      "lens_id": "WEB-INFORMATION-PRIORITY-001",
+      "version": "1.0.1"
+    },
+    {
+      "lens_id": "WEB-USER-FLOW-BEFORE-SCREEN-001",
+      "version": "1.0.1"
+    },
+    {
+      "lens_id": "WEB-STATE-LANGUAGE-ACTION-CONSISTENCY-001",
+      "version": "1.0.0"
+    },
+    {
+      "lens_id": "WEB-NAVIGATION-TAXONOMY-AND-REACHABILITY-001",
+      "version": "1.0.0"
+    },
+    {
+      "lens_id": "WEB-PRIMARY-IDENTITY-VISIBILITY-001",
+      "version": "1.0.0"
+    },
+    {
+      "lens_id": "WEB-REAL-CONTENT-FIRST-001",
+      "version": "1.0.1"
+    },
+    {
+      "lens_id": "WEB-INTERACTION-STATES-001",
+      "version": "1.0.1"
+    },
+    {
+      "lens_id": "WEB-RESPONSIVE-WORKSPACE-001",
+      "version": "1.0.1"
+    },
+    {
+      "lens_id": "WEB-VISUAL-HIERARCHY-AND-DENSITY-001",
+      "version": "1.0.1"
+    },
+    {
+      "lens_id": "WEB-ERROR-FIRST-VISUAL-QA-001",
+      "version": "1.0.1"
+    }
+  ],
+  "ordering_policy": {
+    "after": [
+      "HUMAN-PRIMARY-WORK-001",
+      "HUMAN-AUDIENCE-AND-CONTEXT-001"
+    ],
+    "before": [
+      "WEB-VISUAL-HIERARCHY-AND-DENSITY-001",
+      "implementation"
+    ]
+  },
+  "mandatory_workflows": [
+    "RULE_DEFECT_WORKFLOW"
+  ],
+  "context_budget": {
+    "lenses": 12,
+    "rules": 80,
+    "policy": "compact_contracts_only"
+  },
+  "requires": [
+    "LSET-HUMAN-WORK-DESIGN-CORE-001",
+    "LSET-DESIGN-DIRECTION-CONTROL-001",
+    "PROVIDER_ADAPTER"
+  ],
+  "before": [
+    "PROJECT_CONTEXT"
+  ],
+  "project_state_created": false,
+  "removable": true
+}

@@ -1,0 +1,129 @@
+{
+  "$schema": "../../../schemas/lens-set-composition.schema.json",
+  "lens_set_id": "LSET-COORDINATION-HQ-PORTABLE-001",
+  "version": "0.1.0",
+  "order_id": "LORD-HQ-PORTABILITY-001",
+  "risk": "CRITICAL",
+  "reused_modules": [
+    {
+      "lens_id": "LENS-INTAKE-001",
+      "version": "0.1.0",
+      "role": "operator intake normalization"
+    },
+    {
+      "lens_id": "LENS-DECISION-001",
+      "version": "0.1.0",
+      "role": "decision/proposal separation"
+    },
+    {
+      "lens_id": "LENS-BOUNDARY-001",
+      "version": "0.1.1",
+      "role": "visible-state and read-only boundary"
+    },
+    {
+      "lens_id": "LENS-STATE-001",
+      "version": "0.1.0",
+      "role": "reattachment and state projection"
+    },
+    {
+      "lens_id": "LENS-QUEUE-001",
+      "version": "0.1.0",
+      "role": "planning-before-queue and scope admission"
+    },
+    {
+      "lens_id": "LENS-REPORT-001",
+      "version": "0.1.0",
+      "role": "operator projection"
+    }
+  ],
+  "new_modules": [
+    {
+      "lens_id": "LENS-HQVISIBLE-001",
+      "name": "Visible Thread State Compiler",
+      "version": "0.1.0",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQAUTH-001",
+      "name": "Authority and Provenance Compiler",
+      "version": "0.1.0",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQPROJECT-001",
+      "name": "Project Registry Compiler",
+      "version": "0.1.0",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQARTIFACT-001",
+      "name": "Artifact Graph Compiler",
+      "version": "0.1.0",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQPRIVACY-001",
+      "name": "Privacy and Export Profile Lens",
+      "version": "0.1.0",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQINTEGRITY-001",
+      "name": "Canonical State and Integrity Lens",
+      "version": "0.1.0",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQBOOTSTRAP-001",
+      "name": "Fresh-Thread Bootstrap Lens",
+      "version": "0.1.0",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQRESTORE-001",
+      "name": "Restore Verification Lens",
+      "version": "0.1.0",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    },
+    {
+      "lens_id": "LENS-HQDELTA-001",
+      "name": "Delta Export and Conflict-Aware Merge Lens",
+      "version": "0.1.0",
+      "maturity": "prototype",
+      "evidence_level": "L1"
+    }
+  ],
+  "mount_order": [
+    "LENS-INTAKE-001",
+    "LENS-BOUNDARY-001",
+    "LENS-HQVISIBLE-001",
+    "LENS-HQAUTH-001",
+    "LENS-HQPROJECT-001",
+    "LENS-QUEUE-001",
+    "LENS-DECISION-001",
+    "LENS-HQARTIFACT-001",
+    "LENS-HQPRIVACY-001",
+    "LENS-HQINTEGRITY-001",
+    "LENS-STATE-001",
+    "LENS-HQBOOTSTRAP-001",
+    "LENS-HQRESTORE-001",
+    "LENS-HQDELTA-001",
+    "LENS-REPORT-001"
+  ],
+  "compatibility": {
+    "status": "static_only",
+    "authority_conflicts": [],
+    "context_budget": "bounded_by_projection_and_artifact_references",
+    "external_behavior": "unavailable"
+  },
+  "removable": true,
+  "canonical_replacement_permitted": false
+}

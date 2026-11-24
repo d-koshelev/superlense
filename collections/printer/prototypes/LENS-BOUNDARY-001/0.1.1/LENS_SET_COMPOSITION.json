@@ -1,0 +1,20 @@
+{
+  "set_id": "LENS-BOUNDARY-001-SOLO",
+  "version": "0.1.1",
+  "ordered_modules": [
+    "LENS-BOUNDARY-001"
+  ],
+  "context_budget": {
+    "estimated_tokens": "unavailable",
+    "policy": "measure_not_guess"
+  },
+  "authority_check": {
+    "result": "pass",
+    "operator_final": true
+  },
+  "compatibility_check": {
+    "result": "provisional",
+    "tested_pairs": [],
+    "unknown_pairs": []
+  }
+}

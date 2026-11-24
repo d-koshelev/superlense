@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:superlense:website-builder:design-direction:1.0.0",
+  "title": "DESIGN_DIRECTION",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "direction_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "business_rationale": {
+      "type": "string"
+    },
+    "audience_fit": {
+      "type": "string"
+    },
+    "primary_task_support": {
+      "type": "string"
+    },
+    "visual_language": {
+      "type": "string"
+    },
+    "layout": {
+      "type": "string"
+    },
+    "typography": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "imagery": {
+      "type": "string"
+    },
+    "motion": {
+      "type": "string"
+    },
+    "density": {
+      "type": "string"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "content_implications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "technical_implications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "strengths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "what_is_preserved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "what_is_avoided": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "OPERATOR_APPROVED",
+        "REJECTED",
+        "SUPERSEDED"
+      ]
+    },
+    "operator_decision_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "direction_id",
+    "project_id",
+    "name",
+    "business_rationale",
+    "audience_fit",
+    "primary_task_support",
+    "visual_language",
+    "layout",
+    "typography",
+    "color",
+    "imagery",
+    "motion",
+    "density",
+    "components",
+    "content_implications",
+    "technical_implications",
+    "strengths",
+    "risks",
+    "what_is_preserved",
+    "what_is_avoided",
+    "status",
+    "operator_decision_id"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "OPERATOR_APPROVED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "operator_decision_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "operator_decision_id"
+        ]
+      }
+    }
+  ]
+}

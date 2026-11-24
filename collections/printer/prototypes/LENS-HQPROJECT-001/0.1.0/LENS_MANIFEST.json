@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "lens_id": "LENS-HQPROJECT-001",
+  "name": "Project Registry Compiler",
+  "version": "0.1.0",
+  "package_type": "LensModulePrototype",
+  "classification": {
+    "primary_effect_class": "Collimator",
+    "secondary_effect_classes": [
+      "Memory",
+      "Stabilizer"
+    ],
+    "scope": "coordination_headquarters_portability",
+    "authority": "advisory_with_explicit_boundaries",
+    "persistence": "portable_runtime_mount"
+  },
+  "adjacent_concept_check": {
+    "result": "Lens_Module_candidate",
+    "not_merely": [
+      "schema",
+      "prompt",
+      "installer",
+      "queue",
+      "report",
+      "tool",
+      "archive",
+      "agent"
+    ]
+  },
+  "qualification": {
+    "answers": {
+      "defined_problem_class": true,
+      "behavioral_transformation": true,
+      "removable": true,
+      "input_contract": true,
+      "output_or_state_contract": true,
+      "scope_authority_boundaries": true,
+      "baseline_measurable": true,
+      "version_and_provenance": true
+    },
+    "passes": true
+  },
+  "maturity": "prototype",
+  "evidence_level": "L1",
+  "external_validation": "waiting_external_agent",
+  "provenance": {
+    "order": "orders/hqport/LDEV-LENS-HQPROJECT-001.json",
+    "specification": "lens-families/hq-portability/specs/PROJECT_REGISTRY_COMPILER_LENS.md",
+    "source_pack": "LNS-CORE-LFND-HQPORT-001",
+    "doctrine": "LNS-FOUNDRY-DOCTRINE@1.0.0"
+  }
+}
